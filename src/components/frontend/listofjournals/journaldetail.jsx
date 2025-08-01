@@ -271,5 +271,3 @@ const JournalDetail = () => {
 export default JournalDetail;
 
 
-
-gowri
