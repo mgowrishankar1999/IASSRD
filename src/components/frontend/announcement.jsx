@@ -26,21 +26,21 @@ const Announcement = () => {
     const announcements = [
         {
             title: "Announcement",
-            heading: "Energy Research Journal welcomes new Editor-in-Chief",
+            heading: "New Editor-in-Chief for Journal of Social Science Research",
             content:
-                "We are delighted to announce that Dr. Erdem Cuce has joined Energy Research Journal as the new Editor-in-Chief. Dr. Cuce is a distinguished researcher in sustainable energy technologies, with over 200 scientific publications and a legacy of impactful contributions to the field.",
+                "We are delighted to announce the appointment of Dr. Amara Singh as the new Editor-in-Chief of the Journal of Social Science Research. Dr. Singh is a renowned scholar in cultural sociology, with over 180 peer-reviewed publications and significant contributions to understanding social identity dynamics.",
         },
         {
             title: "Announcement",
-            heading: "SGAMR 2020 Award Winners",
+            heading: "2021 Social Impact Research Awards",
             content:
-                "It is with great pleasure that we announce the SGAMR Annual Awards 2020. This award is given annually to Researchers and Reviewers of International Journal of Structural Glass and Advanced Materials Research (SGAMR) who have shown innovative contributions and promising research, as well as others who have excelled in their Editorial duties.",
+                "The International Journal of Sociology and Social Policy is proud to announce the recipients of the 2021 Social Impact Research Awards. These awards honor researchers and reviewers who have demonstrated exceptional innovation and commitment to advancing knowledge in areas such as social inequality, community development, and policy analysis.",
         },
         {
             title: "Announcement",
-            heading: "Special Issue on Neuroinflammation and COVID-19 Announced",
+            heading: "Special Issue on Digital Societies and Social Change",
             content:
-                'This special issue "Neuroinflammation and COVID-19" aims to provide a space for debate in the face of the growing evidence on the affectation of the nervous system by COVID-19, supported by original studies and case series.',
+                "The Journal of Contemporary Social Issues invites submissions for a special issue on 'Digital Societies and Social Change.' This issue aims to explore the impact of digital technologies on social structures and behaviors, encouraging original research, theoretical papers, and case studies on digital transformation in society.",
         },
     ];
 

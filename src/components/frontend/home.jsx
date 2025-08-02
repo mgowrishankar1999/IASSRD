@@ -252,11 +252,11 @@ const FALLBACK_IMAGES = [cover1, cover2, cover3];
 
 // Reusable Testimonial Card Component
 const TestimonialCard = ({ testimonial }) => (
-    <div className="testimonial-card">
+    <div className="testimonial-card mb-3">
         <Link to={`/journal/${testimonial.journalAbbrevation}`}>
-            <img src={testimonial.image} alt={testimonial.alt} className="cursor-pointer" />
+            <img src={testimonial.image} alt={testimonial.alt} className="cursor-pointer object-contain transition-transform duration-1000 ease-in-out hover:scale-110 origin-center" />
         </Link>
-        <p>"{testimonial.quote}"</p>
+        <p>{testimonial.quote}</p>
         <h4>{testimonial.author}</h4>
     </div>
 );
@@ -291,37 +291,36 @@ const TestimonialCarousel = ({ testimonials }) => {
           .scroll-container {
             display: flex;
             width: fit-content;
-            animation: scrollTestimonials 160s linear infinite;
+            animation: scrollTestimonials 230s linear infinite;
           }
           .scroll-container.paused {
             animation-play-state: paused;
           }
           .testimonial-card {
             flex: 0 0 auto;
-            width: 250px;
+            width: 150px;
             height:100%;
-            margin-right: 12px;
+            margin-right: 30px;
+            margin 
             background: rgba(255, 255, 255, 0.9);
-            border-radius: 8px;
-            padding: 12px;
             color: #333;
             text-align: left;
           }
           .testimonial-card img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            object-fit: center;
             border-radius: 4px;
+        
           }
-          .testimonial-card p {
-            font-size: 14px;
-            margin: 10px 0;
-          }
-          .testimonial-card h4 {
-            font-size: 16px;
-            font-weight: bold;
-            margin: 0;
-          }
+        //   .testimonial-card p {
+        //     font-size: 14px;
+        //     margin: 10px 0;
+        //   }
+        //   .testimonial-card h4 {
+        //     font-size: 16px;
+        //     font-weight: bold;
+        //     margin: 0;
+        //   }
         `}
             </style>
             <div className={`scroll-container ${isPaused ? "paused" : ""}`}>
@@ -336,12 +335,12 @@ const TestimonialCarousel = ({ testimonials }) => {
 // Hero Section Component
 const HeroSection = ({ isSearchOpen, testimonials }) => (
     <div
-        className={`h-[70vh] w-full bg-hero flex flex-col justify-between ${isSearchOpen ? "mt-[180px]" : "mt-[90px]"
+        className={`h-[64vh] w-full  bg-hero flex flex-col justify-between ${isSearchOpen ? "mt-[180px]" : "mt-[90px]"
             } px-[80px] text-center text-white`}
         role="region"
         aria-label="Hero section"
     >
-        <div className="pt-[60px] pb-[25px]">
+        <div className="pt-[30px] pb-[25px] mb-3">
             <h1 className="text-5xl font-thin">Your Partner in Research Excellence</h1>
             <p className="text-xl font-normal mt-4">
                 A leader in scientific publishing with over 10,000 articles published in 30+ open access journals

@@ -721,8 +721,8 @@ const AddNewAffiliation = () => {
                                     {loading
                                         ? "Saving..."
                                         : location.state && location.state.affiliation
-                                        ? "Update"
-                                        : "Save"}
+                                            ? "Update"
+                                            : "Save"}
                                 </button>
                                 <button
                                     type="button"
