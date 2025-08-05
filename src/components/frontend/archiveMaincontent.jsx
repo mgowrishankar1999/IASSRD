@@ -595,9 +595,9 @@ const ArchiveMaincontent = () => {
         <>
             <Navbar isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} />
             <div
-                className={`px-[80px] py-[30px] ${isSearchOpen ? "mt-[160px]" : "mt-[80px]"}`}
+                className={`px-[80px] py-[22px] ${isSearchOpen ? "mt-[160px]" : "mt-[80px]"}`}
             >
-                <div className="flex mt-8">
+                <div className="flex ">
                     <Sidebar
                         journalAbbrevation={journalAbbrevation}
                         dynamicProps={journal}

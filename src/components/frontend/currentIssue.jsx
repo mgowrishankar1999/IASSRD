@@ -747,7 +747,7 @@ const CurrentIssue = () => {
                         / <span className="text-teal-600">Current Issue</span>
                     </nav>
                 </header> */}
-                <div className="flex mt-8">
+                <div className="flex mt-3 ">
                     <Sidebar journalAbbrevation={journalAbbrevation} dynamicProps={journal} />
                     <div className="w-[75vw] ps-6 h-auto">
                         <p className="text-3xl text-blue-800 font-bold mb-5">{journal?.journalName}</p>

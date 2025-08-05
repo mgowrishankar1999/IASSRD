@@ -936,7 +936,7 @@ function Listofjournals() {
     };
 
     // Static menu items for the sidebar
-const menuItems = [
+    const menuItems = [
         { name: 'About Us', path: '/about-us' },
         { name: 'Open Access', path: '/open-access' },
         // { name: 'Authors', path: '/authors' },
@@ -948,7 +948,7 @@ const menuItems = [
         { name: 'Terms and Conditions', path: '/terms-and-conditions' },
         { name: 'Privacy Policy', path: '/privacy-policy' },
         { name: 'Why Publish with Us?', path: '/whypublishwithus' },
-        { name: 'Contact Us', path: '/contact-us' }
+        { name: 'Contact Us', path: '/contactus' }
     ];
 
 
@@ -968,9 +968,9 @@ const menuItems = [
             <div className={`px-[80px] py-[30px] ${isSearchOpen ? "mt-[160px]" : "mt-[80px]"}`}>
                 <div className="flex">
                     <div className="w-[25vw] mr-4">
-                <p className="text-3xl text-gray-800 font-bold mb-1">Journals</p>
+                        <p className="text-3xl text-gray-800 font-bold mb-1">Journals</p>
                         <p className="border-t border-gray-400 mb-4"></p>
-                        {/* {/* <p className="text-gray-800 text-lg font-bold">Menu</p> */} 
+                        {/* {/* <p className="text-gray-800 text-lg font-bold">Menu</p> */}
                         <ul className="mt-2 space-y-2">
                             {menuItems.map((item, index) => (
                                 <li
