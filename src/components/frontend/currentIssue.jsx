@@ -738,15 +738,15 @@ const CurrentIssue = () => {
         <>
         {}
             <Navbar isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} />
-            <div className={`px-[80px] py-[30px] ${isSearchOpen ? "mt-[160px]" : "mt-[80px]"}`}>
-                <header className="px-6 py-4">
+            <div className={`px-[80px] py-[30px] ${isSearchOpen ? "mt-[140px]" : "mt-[60px]"}`}>
+                {/* <header className="px-6 py-4">
                     <nav className="text-sm text-gray-500">
                         <Link to="/" className="hover:underline">
                             Home
                         </Link>{" "}
                         / <span className="text-teal-600">Current Issue</span>
                     </nav>
-                </header>
+                </header> */}
                 <div className="flex mt-8">
                     <Sidebar journalAbbrevation={journalAbbrevation} dynamicProps={journal} />
                     <div className="w-[75vw] ps-6 h-auto">

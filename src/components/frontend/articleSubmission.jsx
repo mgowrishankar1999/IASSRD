@@ -191,10 +191,10 @@
 //                         <p className="mt-2 text-center text-sm text-gray-600">
 //                             Complete the form below or email your manuscript to
 //                             <a
-//                                 href="mailto:editor@iassrd.org"
+//                                 href="mailto:iassrd.editor@gmail.com"
 //                                 className="text-purple-600 hover:text-purple-800 ml-1 underline"
 //                             >
-//                                 editor@iassrd.org
+//                                 iassrd.editor@gmail.com
 //                             </a>
 //                         </p>
 //                     </div>
@@ -550,10 +550,10 @@ const ArticleSubmission = () => {
                         <p className="mt-2 text-center text-sm text-gray-600">
                             Complete the form below or email your manuscript to
                             <a
-                                href="mailto:editor@iassrd.org"
+                                href="mailto:iassrd.editor@gmail.com"
                                 className="text-purple-600 hover:text-purple-800 ml-1 underline"
                             >
-                                editor@iassrd.org
+                                iassrd.editor@gmail.com
                             </a>
                         </p>
                     </div>
@@ -722,13 +722,13 @@ const ArticleSubmission = () => {
                                     Available Formats
                                 </p>
                                 <a
-                                    href="#"
+                                    href="https://iassrd.com/uploads/template/IASSRD-Article_Template.docx"
                                     className="transition-transform duration-200 ease-in-out hover:-translate-y-1 block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-all duration-300 shadow-md hover:shadow-lg"
                                 >
                                     Download Word Template
                                 </a>
                                 <a
-                                    href="#"
+                                    href="https://iassrd.com/uploads/template/IASSRD-Article_Template.pdf"
                                     className="transition-transform duration-200 ease-in-out hover:-translate-y-1 block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-all duration-300 shadow-md hover:shadow-lg"
                                 >
                                     Download PDF Template

@@ -348,8 +348,14 @@ const AddNewAffiliation = () => {
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState("");
     const [currentUser, setCurrentUser] = useState(null);
+    const [countries, setCountries] = useState([]);
+    const [countriesLoading, setCountriesLoading] = useState(true);
+    const [countriesError, setCountriesError] = useState(null);
+
 
     const BASE_URL = "https://iassrd.com:8081/api/v1";
+    const COUNTRIES_API = "https://restcountries.com/v3.1/all?fields=name,cca2";
+
 
     // Fetch current user data by matching userName from localStorage
     useEffect(() => {
@@ -397,6 +403,47 @@ const AddNewAffiliation = () => {
             }
         };
         fetchCurrentUser();
+    }, []);
+
+
+    useEffect(() => {
+        const controller = new AbortController();
+        const signal = controller.signal;
+
+        const fetchCountries = async () => {
+            try {
+                setCountriesLoading(true);
+                setCountriesError(null);
+                const response = await fetch(COUNTRIES_API, { signal });
+                if (!response.ok) throw new Error("Failed to fetch countries");
+                const data = await response.json();
+                const sortedCountries = (Array.isArray(data) ? data : data.data || [])
+                    .map((country) => ({
+                        name: country.name?.common || "Unknown",
+                        code: country.cca2 || "XX",
+                    }))
+                    .filter((country) => country.name && country.code)
+                    .sort((a, b) => a.name.localeCompare(b.name));
+                setCountries(sortedCountries);
+            } catch (err) {
+                if (err.name !== "AbortError") {
+                    console.error("Error fetching countries:", err);
+                    setCountriesError("Failed to load countries. Please try again.");
+                    setCountries([]); // Fallback to empty list instead of hard-coded countries
+                    setModal({
+                        show: true,
+                        type: "error",
+                        message: "Error fetching countries: " + err.message,
+                    });
+                }
+            } finally {
+                setCountriesLoading(false);
+            }
+        };
+
+        fetchCountries();
+
+        return () => controller.abort();
     }, []);
 
     // Load affiliation data for editing or initialize for adding
@@ -612,7 +659,7 @@ const AddNewAffiliation = () => {
                             </div>
 
                             {/* Country */}
-                            <div>
+                            {/* <div>
                                 <label className="block text-sm font-medium text-blue-600 mb-1">Country *</label>
                                 <input
                                     type="text"
@@ -623,6 +670,25 @@ const AddNewAffiliation = () => {
                                     className="w-full px-3 py-2 border border-blue-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-sm"
                                     required
                                 />
+                            </div> */}
+                            <div>
+                                <label className="block text-sm font-medium text-blue-600 mb-1">Country *</label>
+                                <select
+                                    name="country"
+                                    value={affiliation.country}
+                                    onChange={handleChange}
+                                    className="w-full px-3 py-2 border border-blue-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-sm"
+                                    required
+                                    disabled={countriesLoading || countriesError}
+                                >
+                                    <option value="">Select a country</option>
+                                    {countries.map((country) => (
+                                        <option key={country.code} value={country.name}>
+                                            {country.name}
+                                        </option>
+                                    ))}
+                                </select>
+                                {countriesLoading && <p className="text-sm text-gray-500 mt-1">Loading countries...</p>}
                             </div>
 
                             {/* Website */}

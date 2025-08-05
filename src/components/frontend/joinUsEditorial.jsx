@@ -86,7 +86,7 @@ const JoinUsFontend = () => {
         if (formData.cv) data.append("cv", formData.cv);
 
         try {
-            const response = await fetch("https://iassrd.com:8081/api/v1/joinus", {
+            const response = await fetch("https://iassrd.com:8081/api/v1/joineditorialboard", {
                 method: "POST",
                 body: data,
             });

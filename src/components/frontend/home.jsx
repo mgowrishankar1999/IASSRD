@@ -341,9 +341,9 @@ const HeroSection = ({ isSearchOpen, testimonials }) => (
         aria-label="Hero section"
     >
         <div className="pt-[30px] pb-[25px] mb-3">
-            <h1 className="text-5xl font-thin">Your Partner in Research Excellence</h1>
+            <h1 className="text-5xl font-thin">Advancing Research Globally</h1>
             <p className="text-xl font-normal mt-4">
-                A leader in scientific publishing with over 10,000 articles published in 30+ open access journals
+              Over 10,000 published articles across 30+ open-access journals dedicated to academic excellence.
             </p>
             <div className="flex justify-center space-x-4 mt-8">
                 <a
@@ -353,7 +353,7 @@ const HeroSection = ({ isSearchOpen, testimonials }) => (
                     Submit Your Article
                 </a>
                 <a
-                    href="/journals"
+                    href="/journal"
                     className="border border-white py-2 px-4 font-medium text-white hover:text-red-500 rounded-md transition-all duration-300"
                 >
                     Browse our Journals

@@ -81,7 +81,7 @@ const EditorialBoard = () => {
                     aria-hidden="true"
                 ></div>
             )}
-            <div className={`px-[80px] py-[30px] ${isSearchOpen ? "mt-[160px]" : "mt-[80px]"} bg-gradient-to-br from-gray-50 to-white min-h-screen`}>
+            <div className={`px-[80px] py-[30px] ${isSearchOpen ? "mt-[140px]" : "mt-[60px]"} bg-gradient-to-br from-gray-50 to-white min-h-screen`}>
                 <div className="flex mt-8">
                     <Sidebar journalAbbreviation={journalAbbrevation} dynamicProps={journal} />
                     <div className="w-[75vw] ps-6 h-auto">
@@ -89,7 +89,7 @@ const EditorialBoard = () => {
                         <p className="border-b border-gray-300 mb-8"></p>
 
                         {/* Breadcrumb */}
-                        <div className="text-sm text-gray-600 mb-6 flex flex-wrap items-center space-x-2">
+                        {/* <div className="text-sm text-gray-600 mb-6 flex flex-wrap items-center space-x-2">
                             <Link to="/" className="hover:text-blue-600 transition-colors duration-200">Home</Link>
                             <span className="text-gray-400">/</span>
                             <Link to="/journals" className="hover:text-blue-600 transition-colors duration-200">Journals</Link>
@@ -99,7 +99,7 @@ const EditorialBoard = () => {
                             </Link>
                             <span className="text-gray-400">/</span>
                             <span className="text-gray-800 font-medium">Editorial Team</span>
-                        </div>
+                        </div> */}
 
                         {/* Editorial Board Members Section */}
                         <div className="flex items-center justify-between mb-8 border-b-2 border-blue-200 pb-4">

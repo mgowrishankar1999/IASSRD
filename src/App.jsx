@@ -36,6 +36,17 @@ import ApcFrontned from './components/frontend/listofjournals/apc'
 
 
 
+import ProfileSearch from './components/frontend/profileSearch'
+import AuthorProfile from './components/frontend/authorProfile'
+import UniversityProfile from './components/frontend/universityProfile'
+import CountryProfile from  './components/frontend/countryProfile'
+
+
+import Peerreview from './components/frontend/peerReview'
+import PublicationEthics from './components/frontend/publicationEthics'
+import Editorialpolicy from './components/frontend/editorialPolicy'
+import Whypublish from './components/frontend/whyPublishwithus'
+
 
 
 
@@ -82,6 +93,10 @@ import {
   createRoutesFromElements,
   Route,
 } from "react-router-dom";
+import About from './components/frontend/about'
+import PrivacyPolicy from './components/frontend/PrivacyPolicy'
+import TermsAndConditions from './components/frontend/TermsAndConditions'
+import OpenAccess from './components/frontend/OpenAccess'
 // imports 
 
 function App() {
@@ -104,7 +119,27 @@ function App() {
         <Route path="/fellowmembers" element={<FellowMembership />} />
         <Route path="/joinus-editorial" element={<JoinUsEditorial />} />
         <Route path="/joinus-fellowmember" element={<JoinUsFellowmember />} />
+        <Route path="/about-us" element={<About />} />
 
+
+
+         {/* profile search routes------------- */}
+
+
+        <Route path="/profile-search" element={<ProfileSearch />} />
+        <Route path="/author_profile/:name" element={<AuthorProfile />} />
+        <Route path="/university_profile/:affName" element={<UniversityProfile />} />
+        <Route path="/country_profile/:name" element={<CountryProfile />} />
+
+
+              
+        <Route path="/peer-review" element={<Peerreview />} />
+        <Route path="/publication-ethics" element={<PublicationEthics />} />
+        <Route path="/editorial-policy" element={<Editorialpolicy />} />
+        <Route path="/whypublishwithus" element={<Whypublish />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="/open-access" element={<OpenAccess />} />
 
 
 

@@ -16,6 +16,8 @@ const FellowMembership = () => {
   const [selectedCategory, setSelectedCategory] = useState("Fellow Members");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
 
   // Fetch members data and normalize membershipType
   useEffect(() => {
@@ -121,9 +123,16 @@ const FellowMembership = () => {
 
   return (
     <>
-      <Navbar />
-      <main className="min-h-screen py-8 px-6 sm:px-6 lg:px-24 bg-gradient-to-b from-gray-100 to-gray-50">
-        <div className="max-w-8xl mx-auto mt-20">
+      <Navbar isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} />
+      {
+        isSearchOpen && (
+          <div
+            className="fixed inset-0 bg-gray-600 bg-opacity-50 z-10"
+            aria-hidden="true"
+          ></div>
+        )
+      }      <main className={`min-h-screen  px-6 py-4  sm:px-6 lg:px-24 bg-gradient-to-b from-gray-100 to-gray-50 ${isSearchOpen ? 'mt-[180px]' : 'mt-[90px]'}`}>
+        <div className="max-w-8xl mx-auto ">
           {/* Header and Search Bar */}
           <div className="bg-navbar-gradient from-indigo-500 to-purple-600 rounded-lg shadow-lg p-6 mb-8">
             <h1 className="text-3xl font-bold text-white mb-4">Fellow Memberships</h1>
@@ -192,7 +201,7 @@ const FellowMembership = () => {
 
             ))}
             <Link
-              to="/join"
+              to="/joinus-fellowmember"
               className="px-5 py-2 bg-orange-500 text-white rounded-lg shadow-md hover:bg-orange-600 hover:scale-105 transition-all duration-300 font-semibold"
               aria-label="Join the membership program"
             >

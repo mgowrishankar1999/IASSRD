@@ -1448,7 +1448,7 @@ const JoinUs = () => {
                                     <td className="p-3 flex gap-2">
                                         {item.photoPath && (
                                             <a
-                                                href={`https://iassrd.com:8081${item.photoPath}`}
+                                                href={`https://iassrd.com/uploads${item.photoPath}`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="text-blue-600 hover:text-blue-800"
@@ -1459,7 +1459,7 @@ const JoinUs = () => {
                                         )}
                                         {item.cvPath && (
                                             <a
-                                                href={`https://.com/uploads/${item.cvPath}`}
+                                                href={`https://iassrd.com/uploads/${item.cvPath}`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="text-red-600 hover:text-red-800"

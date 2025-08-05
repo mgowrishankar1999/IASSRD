@@ -936,20 +936,21 @@ function Listofjournals() {
     };
 
     // Static menu items for the sidebar
-    const menuItems = [
+const menuItems = [
         { name: 'About Us', path: '/about-us' },
-        { name: 'Journals', path: '/journals' },
         { name: 'Open Access', path: '/open-access' },
-        { name: 'Authors', path: '/authors' },
-        { name: 'Reviewers', path: '/reviewers' },
-        { name: 'Editors', path: '/editors' },
-        { name: 'APC', path: '/apc' },
-        { name: 'Our Policies', path: '/policies' },
+        // { name: 'Authors', path: '/authors' },
+        { name: 'Reviewers', path: '/joinus-editorial' },
+        { name: 'Editorial Policy', path: '/editorial-policy' },
+        { name: 'APC', path: '/apcs' },
+        // { name: 'Our Policies', path: '/policies' },
         { name: 'Publication Ethics', path: '/publication-ethics' },
         { name: 'Terms and Conditions', path: '/terms-and-conditions' },
         { name: 'Privacy Policy', path: '/privacy-policy' },
+        { name: 'Why Publish with Us?', path: '/whypublishwithus' },
         { name: 'Contact Us', path: '/contact-us' }
     ];
+
 
     return (
         <HelmetProvider>
@@ -969,7 +970,7 @@ function Listofjournals() {
                 <div className="flex">
                     <div className="w-[25vw] mr-4">
                         <p className="border-t border-gray-400 mb-4"></p>
-                        <p className="text-gray-800 text-lg font-bold">Menu</p>
+                        {/* {/* <p className="text-gray-800 text-lg font-bold">Menu</p> */} 
                         <ul className="mt-2 space-y-2">
                             {menuItems.map((item, index) => (
                                 <li

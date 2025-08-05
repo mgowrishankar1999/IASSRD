@@ -1061,7 +1061,7 @@ function Articledetail() {
                     aria-hidden="true"
                 ></div>
             )}
-            <div className={`px-[80px] py-[30px] ${isSearchOpen ? 'mt-[160px]' : 'mt-[80px]'}`}>
+            <div className={`px-[80px] py-[30px] ${isSearchOpen ? 'mt-[140px]' : 'mt-[60px]'}`}>
                 <div className="flex mt-8">
                     {/* <Sidebar journalAbbreviation={journalAbbrevation} dynamicProps={journalProps} /> */}
                     <Sidebar journalAbbrevation={journalAbbrevation} dynamicProps={journalProps} />
@@ -1082,7 +1082,7 @@ function Articledetail() {
                                             {author.name.charAt(0).toUpperCase()}
                                         </span>
                                     </div>
-                                    <div>
+                                    {/* <div>
                                         <p
                                             className={`font-semibold ${article.correspondingAuthor &&
                                                 parseInt(article.correspondingAuthor) === author.authorId
@@ -1091,6 +1091,24 @@ function Articledetail() {
                                                 }`}
                                         >
                                             {author.name}
+                                            {article.correspondingAuthor &&
+                                                parseInt(article.correspondingAuthor) === author.authorId
+                                                ? ' *'
+                                                : ''}
+                                        </p>
+                                        <p className="text-sm text-gray-600">{author.institution}</p>
+                                    </div> */}
+                                    <div>
+                                        <p
+                                            className={`font-semibold ${article.correspondingAuthor &&
+                                                parseInt(article.correspondingAuthor) === author.authorId
+                                                ? 'text-red-600'
+                                                : 'underline'
+                                                }`}
+                                        >
+                                            <Link class='hover:text-blue-500 hover:underline' to={`/author_profile/${encodeURIComponent(author.name)}`}>
+                                                {author.name}
+                                            </Link>
                                             {article.correspondingAuthor &&
                                                 parseInt(article.correspondingAuthor) === author.authorId
                                                 ? ' *'
@@ -1212,7 +1230,7 @@ function Articledetail() {
                                 </section>
                             </section>
                             <section className="w-[25%] ps-8 h-full">
-                                <div className="flex flex-wrap justify-around gap-5 h-full">
+                                {/* <div className="flex flex-wrap justify-around gap-5 h-full">
                                     <div className="flex flex-col items-center justify-center">
                                         <p className="text-4xl text-sky-500 font-semibold">{viewCount}</p>
                                         <p className="text-gray-900 font-medium text-sm">Views</p>
@@ -1223,9 +1241,25 @@ function Articledetail() {
                                     </div>
                                     <div className="flex flex-col items-center justify-center">
                                         <p className="text-2xl text-red-500 font-semibold">{article.totalCitations}</p>
-                                        <p className="text-gray-900 font-medium text-sm">Citations</p>
+                                        <p className="text-gray-900 font-medium text-sm">Share Count</p>
+                                    </div>
+                                </div> */}
+
+                                <div className="flex justify-around items-center space-x-8">
+                                    <div className="flex flex-col items-center">
+                                        <p className="text-3xl text-sky-500 font-semibold">{viewCount}</p>
+                                        <p className="text-gray-900 font-medium text-sm">Views</p>
+                                    </div>
+                                    <div className="flex flex-col items-center">
+                                        <p className="text-3xl text-indigo-500 font-semibold">{downloadCount}</p>
+                                        <p className="text-gray-900 font-medium text-sm">Downloads</p>
+                                    </div>
+                                    <div className="flex flex-col items-center">
+                                        <p className="text-3xl text-red-500 font-semibold">{shareCount}</p>
+                                        <p className="text-gray-900 font-medium text-sm">Shares</p>
                                     </div>
                                 </div>
+
                                 <p className="border-t border-gray-300 my-5"></p>
                                 <div>
                                     <p className="text-xl text-gray-800 font-semibold my-2">Download</p>

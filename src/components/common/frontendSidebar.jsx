@@ -283,7 +283,7 @@ const Sidebar = ({ journalAbbrevation: propJournalAbbrevation, dynamicProps }) =
     console.log('Selected journalAbbrevation:', journalAbbrevation);
     console.log('dynamicProps:', dynamicProps);
 
-    const [isDropdownopen, setIsDropdownopen] = useState(false);
+    const [isDropdownopen, setIsDropdownopen] = useState(true);
 
     const handleDropdown = () => {
         setIsDropdownopen((prev) => !prev);
@@ -305,7 +305,7 @@ const Sidebar = ({ journalAbbrevation: propJournalAbbrevation, dynamicProps }) =
                 </div>
 
                 <div className="w-full mt-5 flex flex-col space-y-2">
-                    <div className="min-h-[95px] flex flex-col bg-gray-100 justify-center px-4">
+                    {/* <div className="min-h-[95px] flex flex-col bg-gray-100 justify-center px-4">
                         <p className="text-gray-700 text-md">{`Abbrevation: ${dynamicProps?.abbrevation || 'N/A'}`}</p>
                         <p className="text-gray-700 text-md">{`Frequency: ${dynamicProps?.publicationFrequency || 'N/A'}`}</p>
                         {dynamicProps?.issnOnline && (
@@ -314,7 +314,7 @@ const Sidebar = ({ journalAbbrevation: propJournalAbbrevation, dynamicProps }) =
                         {dynamicProps?.issnPrint && (
                             <p className="text-gray-700 text-md">{`ISSN: ${dynamicProps.issnPrint}`}</p>
                         )}
-                    </div>
+                    </div> */}
                     <ul className="space-y-2">
                         <li className="h-[46px] flex bg-green-500 hover:bg-green-600 justify-between items-center px-4 cursor-pointer">
                             <Link

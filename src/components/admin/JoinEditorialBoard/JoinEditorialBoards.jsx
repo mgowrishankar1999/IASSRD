@@ -967,7 +967,7 @@ const JoinEditorialBoards = () => {
                                     <td className="p-3 flex gap-2">
                                         {item.photo && (
                                             <a
-                                                href={`${BASE_URL}/${item.photo}`}
+                                                href={`https://iassrd.com/uploads/${item.photo}`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="text-blue-600 hover:text-blue-800"

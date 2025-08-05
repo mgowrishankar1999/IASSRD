@@ -87,12 +87,12 @@ const ContactUsFrontend = () => {
             contactPoint: [
                 {
                     "@type": "ContactPoint",
-                    email: "editor@iassrd.org",
+                    email: "iassrd.editor@gmail.com",
                     contactType: "Submissions and Editorial Board",
                 },
                 {
                     "@type": "ContactPoint",
-                    email: "info@iassrd.org",
+                    email: "iassrd.editor@gmail.com",
                     contactType: "Journal Inquiries",
                 },
             ],
@@ -141,12 +141,12 @@ const ContactUsFrontend = () => {
                                     <div>
                                         <h4 className="font-medium text-gray-800 text-sm">Email Us</h4>
                                         <p className="text-gray-600 text-sm">
-                                            <a href="mailto:info@iassrd.org" className="text-blue-600 hover:text-blue-800 transition-colors duration-200">
-                                                info@iassrd.org
-                                            </a>
+                                            {/* <a href="mailto:iassrd.editor@gmail.com" className="text-blue-600 hover:text-blue-800 transition-colors duration-200">
+                                                iassrd.editor@gmail.com
+                                            </a> */}
                                             <br />
-                                            <a href="mailto:editor@iassrd.org" className="text-blue-600 hover:text-blue-800 transition-colors duration-200 mt-1 block">
-                                                editor@iassrd.org
+                                            <a href="mailto:iassrd.editor@gmail.com" className="text-blue-600 hover:text-blue-800 transition-colors duration-200 mt-1 block">
+                                                iassrd.editor@gmail.com
                                             </a>
                                         </p>
                                     </div>
@@ -382,12 +382,12 @@ export default ContactUsFrontend;
 //             contactPoint: [
 //                 {
 //                     "@type": "ContactPoint",
-//                     email: "editor@iassrd.org",
+//                     email: "iassrd.editor@gmail.com",
 //                     contactType: "Submissions and Editorial Board",
 //                 },
 //                 {
 //                     "@type": "ContactPoint",
-//                     email: "info@iassrd.org",
+//                     email: "iassrd.editor@gmail.com",
 //                     contactType: "Journal Inquiries",
 //                 },
 //             ],
@@ -440,12 +440,12 @@ export default ContactUsFrontend;
 //                             <div className="animate-fade-in animation-delay-100">
 //                                 <h4 className="font-medium text-gray-800 text-sm mb-2">Email Us</h4>
 //                                 <p className="text-gray-600 text-sm">
-//                                     <a href="mailto:info@iassrd.org" className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200">
-//                                         info@iassrd.org
+//                                     <a href="mailto:iassrd.editor@gmail.com" className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200">
+//                                         iassrd.editor@gmail.com
 //                                     </a>
 //                                     <br />
-//                                     <a href="mailto:editor@iassrd.org" className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200 mt-1 block">
-//                                         editor@iassrd.org
+//                                     <a href="mailto:iassrd.editor@gmail.com" className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200 mt-1 block">
+//                                         iassrd.editor@gmail.com
 //                                     </a>
 //                                 </p>
 //                             </div>
