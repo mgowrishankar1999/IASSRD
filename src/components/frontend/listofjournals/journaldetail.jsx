@@ -278,7 +278,7 @@ import Footer from '../footer';
 import Sidebar from '../../common/frontendSidebar';
 import { useParams } from 'react-router-dom';
 import JournalContext from "../../common/journalContext";
-import JournalArticlesTabs from '../listofjournals/journalsLatesttabs'; 
+import JournalArticlesTabs from '../listofjournals/journalsLatesttabs';
 import Academia from '../../../assets/academia.png'
 import Google from '../../../assets/google.png'
 import Researchgate from '../../../assets/researchgate.png'
@@ -288,7 +288,7 @@ const JournalDetail = () => {
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const { journalAbbrevation } = useParams();
 
-   
+
     const { journals, loading: contextLoading, error: contextError } = useContext(JournalContext);
     console.log('journals array:', journals);
 
@@ -313,6 +313,12 @@ const JournalDetail = () => {
                 <meta name="description" content={journal?.aimandscope || 'Journal details'} />
             </Helmet>
             <Navbar isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} />
+            {isSearchOpen && (
+                <div
+                    className="fixed inset-0 bg-gray-600 bg-opacity-50 z-10"
+                    aria-hidden="true"
+                ></div>
+            )}
             <div className={`px-[80px] py-[30px] ${isSearchOpen ? 'mt-[140px]' : 'mt-[60px]'}`}>
                 <div className="flex mt-3">
                     <Sidebar

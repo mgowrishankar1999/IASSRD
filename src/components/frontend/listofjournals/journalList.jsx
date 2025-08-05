@@ -966,9 +966,9 @@ const menuItems = [
                 ></div>
             )}
             <div className={`px-[80px] py-[30px] ${isSearchOpen ? "mt-[160px]" : "mt-[80px]"}`}>
-                <p className="text-3xl text-gray-800 font-bold mb-8">Journals</p>
                 <div className="flex">
                     <div className="w-[25vw] mr-4">
+                <p className="text-3xl text-gray-800 font-bold mb-1">Journals</p>
                         <p className="border-t border-gray-400 mb-4"></p>
                         {/* {/* <p className="text-gray-800 text-lg font-bold">Menu</p> */} 
                         <ul className="mt-2 space-y-2">
@@ -984,7 +984,7 @@ const menuItems = [
                         </ul>
                     </div>
                     <div className="w-[75%] h-full">
-                        <p className="border-t border-gray-400 mb-4"></p>
+                        {/* <p className="border-t border-gray-400 mb-4"></p> */}
                         {loading && <p className="text-gray-600 mt-2">Loading journals...</p>}
                         {error && <p className="text-red-600 mt-2">Error: {error}</p>}
                         {!loading && !error && selectedDisciplineId && filteredJournals.length === 0 && (
@@ -994,7 +994,7 @@ const menuItems = [
                             <>
                                 {Object.entries(groupedJournals).map(([letter, journalGroup], groupIndex) => (
                                     <div key={letter}>
-                                        <p className="mt-6 text-2xl font-bold text-gray-800 mb-2">{disciplineName}</p>
+                                        {/* <p className=" text-2xl font-bold text-gray-800 mb-2">{disciplineName}</p> */}
                                         {journalGroup.map((journal, index) => {
                                             const aboutHtml = journal.about || '<p>No description available</p>';
                                             const isExpanded = expanded[journal.journalId || `${letter}-${index}`] || false;

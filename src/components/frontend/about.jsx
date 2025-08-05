@@ -10,7 +10,7 @@ function Aboutus() {
     const navigate = useNavigate();
 
     // Static menu items for the sidebar
-const menuItems = [
+    const menuItems = [
         { name: 'About Us', path: '/about-us' },
         { name: 'Open Access', path: '/open-access' },
         // { name: 'Authors', path: '/authors' },
@@ -40,12 +40,12 @@ const menuItems = [
                 ></div>
             )}
             <div className={`px-[80px] py-[30px] ${isSearchOpen ? "mt-[160px]" : "mt-[80px]"}`}>
-                <p className="text-3xl text-gray-800 font-bold mb-8">About Us</p>
                 <div className="flex">
                     <div className="w-[25vw] mr-4">
+                <p className="text-3xl text-gray-800 font-bold mb-1">About Us</p>   
                         <p className="border-t border-gray-400 mb-4"></p>
-                        {/* {/* <p className="text-gray-800 text-lg font-bold">Menu</p> */} 
-                        <ul className="mt-2 space-y-2">
+                        {/* {/* <p className="text-gray-800 text-lg font-bold">Menu</p> */}
+                        <ul className="mt-1 space-y-2">
                             {menuItems.map((item, index) => (
                                 <li
                                     key={index}
@@ -58,7 +58,7 @@ const menuItems = [
                         </ul>
                     </div>
                     <div className="w-[75%] h-full">
-                        <p className="border-t border-gray-400 mb-4"></p>
+                        {/* <p className="border-t border-gray-400 mb-4"></p> */}
                         <h1 className="text-2xl text-gray-800 font-semibold">About IASSRD</h1>
                         <p className="text-[16px] font-normal text-gray-800 pt-4 text-justify">
                             The <strong>International Academy for Social Sciences Research and Development (IASSRD)</strong> is a global academic consortium committed to promoting innovation, scholarship, and interdisciplinary collaboration in the broad fields of social sciences and humanities. Established to bridge global academic communities, IASSRD serves as a dynamic platform for researchers, scholars, and professionals to engage in impactful knowledge exchange and to foster evidence-based solutions for societal development. Through our diverse initiatives, we facilitate high-quality research publications, organize international conferences and workshops, and build strong networks that connect academia, policy, and practice.

@@ -39,10 +39,10 @@ function WhyPublish() {
                     aria-hidden="true"
                 ></div>
             )}
-            <div className={`px-[80px] py-[30px] ${isSearchOpen ? "mt-[160px]" : "mt-[80px]"}`}>
-                <p className="text-3xl text-gray-800 font-bold mb-8">Why Publish with Us?</p>
+            <div className={`px-[80px] py-[22px] ${isSearchOpen ? "mt-[160px]" : "mt-[80px]"}`}>
                 <div className="flex">
                     <div className="w-[25vw] mr-4">
+                        <p className="text-3xl text-gray-800 font-bold mb-1">Why Publish with Us?</p>
                         <p className="border-t border-gray-400 mb-4"></p>
                         {/* <p className="text-gray-800 text-lg font-bold">Menu</p> */}
                         <ul className="mt-2 space-y-2">
@@ -58,7 +58,7 @@ function WhyPublish() {
                         </ul>
                     </div>
                     <div className="w-[75%] h-full">
-                        <p className="border-t border-gray-400 mb-4"></p>
+                        {/* <p className="border-t border-gray-400 mb-4"></p> */}
                         <h1 className="text-2xl text-gray-800 font-semibold">Why Publish with Us?</h1>
                         <p className="text-[17px] font-normal text-gray-800 pt-4 text-justify">
                             The <strong>International Academy for Social Sciences Research and Development (IASSRD)</strong> is a leading global platform dedicated to advancing knowledge, scholarly communication, and impactful research in the social sciences and humanities. By publishing with IASSRD, you join a vibrant international community of researchers, educators, and policy thinkers committed to fostering interdisciplinary dialogue and societal progress.

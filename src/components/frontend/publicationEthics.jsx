@@ -42,10 +42,10 @@ function PublicationEthics() {
                     aria-hidden="true"
                 ></div>
             )}
-            <div className={`px-[80px] py-[30px] ${isSearchOpen ? "mt-[160px]" : "mt-[80px]"}`}>
-                <p className="text-3xl text-gray-800 font-bold mb-8">Publication Ethics</p>
+            <div className={`px-[80px] py-[22px] ${isSearchOpen ? "mt-[160px]" : "mt-[80px]"}`}>
                 <div className="flex">
                     <div className="w-[25vw] mr-4">
+                <p className="text-3xl text-gray-800 font-bold mb-1">Publication Ethics</p>
                         <p className="border-t border-gray-400 mb-4"></p>
                         {/* <p className="text-gray-800 text-lg font-bold">Menu</p> */}
                         <ul className="mt-2 space-y-2">
@@ -61,7 +61,7 @@ function PublicationEthics() {
                         </ul>
                     </div>
                     <div className="w-[75%] h-full">
-                        <p className="border-t border-gray-400 mb-4"></p>
+                        {/* <p className="border-t border-gray-400 mb-4"></p> */}
                         <h1 className="text-2xl text-gray-800 font-semibold">Publication Ethics</h1>
                         <p className="text-[17px] font-normal text-gray-800 pt-4 text-justify">
                             The <strong>International Academy for Social Sciences Research and Development (IASSRD)</strong> is deeply committed to maintaining the highest standards of integrity and transparency in academic publishing. IASSRD upholds the ethical guidelines established by the Committee on Publication Ethics (COPE) and expects all participants in the publication process—authors, editors, reviewers, and the publisher—to adhere to these principles in both spirit and practice.

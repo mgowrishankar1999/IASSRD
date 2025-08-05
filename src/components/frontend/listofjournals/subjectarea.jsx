@@ -42,7 +42,7 @@ const Subjectarea = () => {
           aria-hidden="true"
         ></div>
       )}
-      <div className={`px-[80px] py-[30px] ${isSearchOpen ? "mt-[140px]" : "mt-[60px]"}`}>
+      <div className={`px-[80px] py-[15px] ${isSearchOpen ? "mt-[140px]" : "mt-[60px]"}`}>
         <div className="flex mt-8">
           <Sidebar journalAbbreviation={journalAbbrevation} dynamicProps={journal} />
           <div className="w-[75vw] ps-6 h-auto">

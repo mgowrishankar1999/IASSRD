@@ -37,10 +37,10 @@ function TermsAndConditions() {
                     aria-hidden="true"
                 ></div>
             )}
-            <div className={`px-[80px] py-[30px] ${isSearchOpen ? "mt-[160px]" : "mt-[80px]"}`}>
-                <p className="text-3xl text-gray-800 font-bold mb-8">Terms and Conditions</p>
+            <div className={`px-[80px] py-[22px] ${isSearchOpen ? "mt-[160px]" : "mt-[80px]"}`}>
                 <div className="flex">
                     <div className="w-[25vw] mr-4">
+                <p className="text-3xl text-gray-800 font-bold mb-1">Terms and Conditions</p>
                         <p className="border-t border-gray-400 mb-4"></p>
                         <ul className="mt-2 space-y-2">
                             {menuItems.map((item, index) => (
@@ -55,7 +55,7 @@ function TermsAndConditions() {
                         </ul>
                     </div>
                     <div className="w-[75%] h-full">
-                        <p className="border-t border-gray-400 mb-4"></p>
+                        {/* <p className="border-t border-gray-400 mb-4"></p> */}
                         <h1 className="text-2xl text-gray-800 font-semibold">International Academy for Social Sciences Research and Development (IASSRD) Terms and Conditions</h1>
                         <h1 className="text-2xl text-gray-800 font-semibold mt-4">Order Processing</h1>
                         <p className="text-[16px] font-normal text-gray-800 pt-4 text-justify">

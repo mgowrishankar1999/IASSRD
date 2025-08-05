@@ -81,7 +81,7 @@ const EditorialBoard = () => {
                     aria-hidden="true"
                 ></div>
             )}
-            <div className={`px-[80px] py-[30px] ${isSearchOpen ? "mt-[140px]" : "mt-[60px]"} bg-gradient-to-br from-gray-50 to-white min-h-screen`}>
+            <div className={`px-[80px] py-[15px] ${isSearchOpen ? "mt-[140px]" : "mt-[60px]"} bg-gradient-to-br from-gray-50 to-white min-h-screen`}>
                 <div className="flex mt-8">
                     <Sidebar journalAbbreviation={journalAbbrevation} dynamicProps={journal} />
                     <div className="w-[75vw] ps-6 h-auto">

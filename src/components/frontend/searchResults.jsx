@@ -615,7 +615,7 @@ const SearchResults = () => {
                 ></div>
             )}
 
-            <div className={`flex py-6 px-[80px] ${isSearchOpen ? 'mt-[185px]' : 'mt-[95px]'}`}>
+            <div className={`flex  px-[80px] ${isSearchOpen ? 'mt-[185px]' : 'mt-[95px]'}`}>
                 {/* Filter Section */}
                 <div className="w-1/4 p-4 max-h-[600px]">
                     <h2 className="text-xl font-semibold mb-4">Search</h2>

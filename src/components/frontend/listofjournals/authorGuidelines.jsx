@@ -245,7 +245,7 @@ const AuthorGuidelines = () => {
                 ></div>
             )}
             <div className={`bg-white mx-4 md:mx-10 mb-4 ${isSearchOpen ? "mt-[160px]" : "mt-[80px]"}`}>
-                <header className="px-6 py-4">
+                <header className="px-6 py-3">
                     {/* <nav className="text-sm text-gray-500">
                         <Link to="/" className="hover:underline">
                             Home

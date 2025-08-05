@@ -133,8 +133,8 @@ const JoinUsFontend = () => {
                 ></div>
             )}
 
-            <main className={`min-h-screen lg:px-55 px-[80px] bg-gray-50 ${isSearchOpen ? 'mt-[160px]' : 'mt-[80px]'}`}>
-                <div className="py-10">
+            <main className={`min-h-screen lg:px-55 px-[80px] bg-gray-50 ${isSearchOpen ? 'mt-[170px]' : 'mt-[80px]'}`}>
+                <div className="py-4">
                     {/* <div
                         className="w-auto h-48 bg-cover bg-right bg-no-repeat box-border"
                         style={{

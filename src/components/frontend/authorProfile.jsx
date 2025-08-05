@@ -311,7 +311,7 @@ const AuthorProfile = () => {
                     ></div>
                 )
             }
-            <div className={`min-h-screen bg-gray-100 flex flex-col px-[90px] ${isSearchOpen ? 'mt-[160px]' : 'mt-[80px]'}`}>
+            <div className={`min-h-screen bg-gray-100 flex flex-col px-[90px] ${isSearchOpen ? 'mt-[130px]' : 'mt-[50px]'}`}>
                 <div
                     className=" mx-10 h-48 bg-cover bg-right bg-no-repeat box-border"
                 // style={{ backgroundImage: `url(${Space})` }}
@@ -327,7 +327,7 @@ const AuthorProfile = () => {
                         </h1>
                     </div>
                 </div>
-                <main className="flex-grow md:mx-0 mx-4 py-8">
+                <main className="flex-grow md:mx-0 mx-4 ">
                     <div className="bg-white rounded-lg shadow-md p-6">
                         <div className="flex flex-col gap-6">
                             {/* Author Details */}

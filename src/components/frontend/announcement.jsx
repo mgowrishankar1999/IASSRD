@@ -95,6 +95,8 @@ const Announcement = () => {
     const { journals, loading: contextLoading, error: contextError } = useContext(JournalContext);
     const [loading, setLoading] = useState(contextLoading);
     const [error, setError] = useState(contextError);
+    const [issueMonth , setIssueMonth] = useState('');
+    const [issueYear, setIssueYear] = useState(''); 
 
     useEffect(() => {
         const fetchCallForPapers = async () => {
@@ -105,6 +107,8 @@ const Announcement = () => {
                 if (data.success && data.data.length > 0) {
                     const filePath = data.data[0].file;
                     setCallForPapersUrl(`https://iassrd.com/uploads${filePath}`);
+                    setIssueMonth(data.data[0].issueMonth);
+                    setIssueYear(data.data[0].issueYear);
                 }
             } catch (error) {
                 console.error('Error fetching call for papers:', error);
@@ -171,10 +175,10 @@ const Announcement = () => {
                                 <button
                                     onClick={handleCallForPapers}
                                     disabled={!callForPapersUrl}
-                                    className={`text-blue-600 hover:text-blue-700 hover:underline ${!callForPapersUrl ? 'opacity-60 cursor-not-allowed' : ''
+                                    className={`text-white px-2  py-1 bg-blue-500 hover:text-gray-100 rounded ${!callForPapersUrl ? 'opacity-100 cursor-not-allowed' : ''
                                         }`}
                                 >
-                                    Learn More
+                                    Call for Paper {issueMonth && issueYear ? `${issueMonth} ${issueYear}` : ''}
                                 </button>
                             ) : (
                                 <Link

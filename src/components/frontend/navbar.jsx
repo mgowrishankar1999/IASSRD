@@ -670,9 +670,9 @@ const Navbar = ({ isSearchOpen, setIsSearchOpen }) => {
 
     return (
         <>
-            <div className="w-full h-[90px] px-[80px] bg-navbar-gradient text-white flex items-center justify-between fixed top-0 left-0 z-50">
+            <div className="w-full h-[90px] px-[70px] bg-navbar-gradient text-white flex items-center justify-between fixed top-0 left-0 z-50">
                 {/* Logo and Branding */}
-                <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-6">
                     <a href="/">
                         <img
                             className="object-contain h-20 w-24 rounded"
@@ -739,13 +739,14 @@ const Navbar = ({ isSearchOpen, setIsSearchOpen }) => {
                     ref={iconRef}
                     className="cursor-pointer"
                     onClick={toggleSearch}
+
                     aria-label={isSearchOpen ? "Close search" : "Open search"}
                     aria-expanded={isSearchOpen}
                 >
                     {isSearchOpen ? (
                         <FiX className="h-6 w-6 text-red-600" />
                     ) : (
-                        <FiSearch className="h-6 w-6" />
+                        <FiSearch className="h-6 w-6 hover:text-green-500" />
                     )}
                 </div>
             </div>
@@ -753,7 +754,7 @@ const Navbar = ({ isSearchOpen, setIsSearchOpen }) => {
             {/* Search Input (Expanded View) */}
             <div
                 ref={searchRef}
-                className={`fixed top-[90px] px-[80px] bg-navbar-search w-full text-black z-40 shadow-lg overflow-hidden transition-all duration-300 ease-in-out ${isSearchOpen ? "max-h-[90px] py-7" : "max-h-0 p-0"
+                className={`fixed top-[90px] px-[80px] bg-navbar-search w-full text-black z-40 shadow-lg overflow-hidden transition-all duration-600 ease-linear ${isSearchOpen ? "max-h-[90px] py-7" : "max-h-0 p-0"
                     }`}
             >
                 <form onSubmit={handleSearch} className="relative flex-1">

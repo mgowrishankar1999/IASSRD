@@ -541,6 +541,12 @@ const ArticleSubmission = () => {
 
             <Navbar isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} />
 
+            {isSearchOpen && (
+                <div
+                    className="fixed inset-0 bg-gray-600 bg-opacity-50 z-10"
+                    aria-hidden="true"
+                ></div>
+            )}
             <div className={`px-[90px] ${isSearchOpen ? "mt-[160px]" : "mt-[80px]"}`}>
                 <div className=" space-y-8  p-10 rounded-xl   ">
                     <div class=''>
