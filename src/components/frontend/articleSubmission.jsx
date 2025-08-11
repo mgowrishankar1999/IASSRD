@@ -547,7 +547,7 @@ const ArticleSubmission = () => {
                     aria-hidden="true"
                 ></div>
             )}
-            <div className={`px-[90px] ${isSearchOpen ? "mt-[160px]" : "mt-[80px]"}`}>
+            <div className={`px-[90px] ${isSearchOpen ? "mt-[145px]" : "mt-[60px]"}`}>
                 <div className=" space-y-8  p-10 rounded-xl   ">
                     <div class=''>
                         <h2 className="text-3xl font-extrabold text-purple-900 text-center ">
@@ -570,7 +570,7 @@ const ArticleSubmission = () => {
                         <form onSubmit={handleSubmit} className="space-y-6 space-x-4 w-3/4 mr-10">
                             <div className="space-y-4">
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700">
+                                    <label className="block text-md font-medium text-gray-700">
                                         Journal <span className="text-red-500">*</span>
                                     </label>
                                     <select
@@ -589,7 +589,7 @@ const ArticleSubmission = () => {
                                     </select>
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700">
+                                    <label className="block text-md font-medium text-gray-700">
                                         Article Title <span className="text-red-500">*</span>
                                     </label>
                                     <input
@@ -602,7 +602,7 @@ const ArticleSubmission = () => {
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700">
+                                    <label className="block text-md font-medium text-gray-700">
                                         Upload Manuscript <span className="text-red-500">*</span>
                                     </label>
                                     <input
@@ -616,7 +616,7 @@ const ArticleSubmission = () => {
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700">
+                                        <label className="block text-md font-medium text-gray-700">
                                             First Name <span className="text-red-500">*</span>
                                         </label>
                                         <input
@@ -629,7 +629,7 @@ const ArticleSubmission = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700">
+                                        <label className="block text-md font-medium text-gray-700">
                                             Last Name <span className="text-red-500">*</span>
                                         </label>
                                         <input
@@ -643,7 +643,7 @@ const ArticleSubmission = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700">
+                                    <label className="block text-md font-medium text-gray-700">
                                         Email Address <span className="text-red-500">*</span>
                                     </label>
                                     <input
@@ -654,13 +654,13 @@ const ArticleSubmission = () => {
                                         className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-purple-500 focus:border-purple-500"
                                         required
                                     />
-                                    <p className="mt-1 text-sm text-gray-500">
+                                    <p className="mt-1 text-md text-gray-500">
                                         We will respond within 3 working days.
                                     </p>
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700">
+                                        <label className="block text-md font-medium text-gray-700">
                                             Country <span className="text-red-500">*</span>
                                         </label>
                                         <select
@@ -679,14 +679,14 @@ const ArticleSubmission = () => {
                                             ))}
                                         </select>
                                         {countriesLoading && (
-                                            <p className="mt-1 text-sm text-gray-500">Loading countries...</p>
+                                            <p className="mt-1 text-md text-gray-500">Loading countries...</p>
                                         )}
                                         {countriesError && (
-                                            <p className="mt-1 text-sm text-red-500">{countriesError}</p>
+                                            <p className="mt-1 text-md text-red-500">{countriesError}</p>
                                         )}
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700">
+                                        <label className="block text-md font-medium text-gray-700">
                                             Mobile Number <span className="text-red-500">*</span>
                                         </label>
                                         <input
@@ -708,7 +708,7 @@ const ArticleSubmission = () => {
                                 </button>
                                 {message && (
                                     <p
-                                        className={`mt-4 text-center text-sm ${message.includes("successful") ? "text-green-600" : "text-red-600"}`}
+                                        className={`mt-4 text-center text-md ${message.includes("successful") ? "text-green-600" : "text-red-600"}`}
                                     >
                                         {message}
                                     </p>
@@ -716,7 +716,7 @@ const ArticleSubmission = () => {
                             </div>
                         </form>
 
-                        <aside className="w-full lg:w-1/3 bg-gradient-to-br from-white to-blue-50 p-6  rounded-2xl shadow-xl border border-gray-100 backdrop-blur-sm bg-opacity-90">
+                        <aside className="w-full lg:w-1/3 backdrop-blur-sm bg-opacity-90">
                             <h3 className="text-xl font-semibold text-blue-700 mb-4">
                                 Download Template
                             </h3>

@@ -265,7 +265,7 @@ const APC = () => {
 
                     <section aria-labelledby="introduction-heading">
                         <h2 id="introduction-heading" className="sr-only">Introduction to APC</h2>
-                        <p className="text-gray-700 text-base mb-5">
+                        <p className="text-gray-700 text-base mb-5 text-justify">
                             International Academy for Social Sciences Research and Development (IASSRD) follows a fully open access
                             publishing model under the terms of the Creative Commons Attribution 4.0 License. All articles published in
                             our journals are immediately and permanently free to access by everyone. This is made possible by an article
@@ -302,7 +302,7 @@ const APC = () => {
 
                     <section aria-labelledby="apc-transparency-heading">
                         <h2 id="apc-transparency-heading" className="sr-only">APC Transparency</h2>
-                        <p className="text-gray-700 text-base mb-5">
+                        <p className="text-gray-700 text-base mb-5 text-justify">
                             The amount of the APC varies depending on the journal in which the article is published. Some journals may
                             have higher APCs due to the volume of submissions they receive. International Academy for Social Sciences
                             Research and Development (IASSRD) is committed to making publication costs as clear as possible. Therefore,

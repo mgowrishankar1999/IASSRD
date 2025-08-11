@@ -379,8 +379,8 @@ const Latesttabs = () => {
                                     className="text-indigo-600 hover:underline ml-1"
                                 >
                                     Volume {article.volume}, Issue {article.issue}
-                                </Link>{" "}
-                                {article.monthFrom} - {article.monthTo} {article.year}
+                                </Link>{", "}
+                                ({article.monthFrom} - {article.monthTo}) {article.year}
                                 <span className="ml-2">Pages: {article.pageFrom}-{article.pageTo}</span>
                             </p>
                             {article.doi && (
@@ -397,7 +397,7 @@ const Latesttabs = () => {
                                 <div className="text-sm text-gray-700 mb-4">
                                     <span className="font-medium">Abstract: </span>
                                     <p
-                                        className={`${expandedAbstracts[article.articleId] ? "" : "line-clamp-2"}`}
+                                        className={`text-justify ${expandedAbstracts[article.articleId] ? "" : "line-clamp-2"}`}
                                     >
                                         {article.abstractText.replace(/<[^>]+>/g, "")}
                                     </p>

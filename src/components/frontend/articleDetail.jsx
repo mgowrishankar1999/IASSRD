@@ -1192,10 +1192,10 @@ function Articledetail() {
                                             </span>
                                         )}
                                     </p>
-                                    <p id="how-to-cite">
+                                    <p id="how-to-cite "class='text-justify'>
                                         <strong>How to Cite:</strong> {article.howToCite}
                                     </p>
-                                    <p id="copyright">
+                                    <p id="copyright" class='text-justify'>
                                         <strong>Copyright:</strong> © {new Date(article.published).getFullYear()} the
                                         Author(s). This article is an open access article distributed under the terms and
                                         conditions of the Creative Commons Attribution (CC-BY) 4.0 license (

@@ -163,7 +163,7 @@ const JournalArticlesTabs = ({ journalId }) => {
             </div>
 
             {filteredArticles.length === 0 ? (
-                <div className="text-center text-gray-600 py-6">No articles found for this journal.</div>
+                <div className="text-center text-gray-600 py-6">This issue is currently awaiting publication. New and engaging articles will be available here soon.</div>
             ) : (
                 <>
                     {filteredArticles.map((article, index) => (
@@ -205,13 +205,20 @@ const JournalArticlesTabs = ({ journalId }) => {
                                     {journals[article.journalId]?.journalName || `Journal ID: ${article.journalId}`}
                                 </Link>
                                 ,
-                                <Link
+                                {/* <Link
                                     to={`/journal/${journals[article.journalId]?.abbrevation || "abbrevation"}/volume_${article.volume}/issue_${article.issue}`}
                                     className="text-indigo-600 hover:underline ml-1"
                                 >
                                     Volume {article.volume}, Issue {article.issue}
                                 </Link>{" "}
-                                {article.monthFrom} - {article.monthTo} {article.year}
+                                {article.monthFrom} - {article.monthTo} {article.year} */}
+                                <Link
+                                    to={`/journal/${journals[article.journalId]?.abbrevation || "abbrevation"}/volume_${article.volume}/issue_${article.issue}`}
+                                    className="text-indigo-600 hover:underline ml-1"
+                                >
+                                    Volume {article.volume}, Issue {article.issue}
+                                </Link>{", "}
+                                ({article.monthFrom} - {article.monthTo}) {article.year}
                                 <span className="ml-2">Pages: {article.pageFrom}-{article.pageTo}</span>
                             </p>
                             {article.doi && (
@@ -228,7 +235,7 @@ const JournalArticlesTabs = ({ journalId }) => {
                                 <div className="text-sm text-gray-700 mb-4">
                                     <span className="font-medium">Abstract: </span>
                                     <p
-                                        className={`${expandedAbstracts[article.articleId] ? "" : "line-clamp-2"}`}
+                                        className={`text-justify ${expandedAbstracts[article.articleId] ? "" : "line-clamp-2"}`}
                                     >
                                         {article.abstractText.replace(/<[^>]+>/g, "")}
                                     </p>

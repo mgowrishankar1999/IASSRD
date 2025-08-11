@@ -168,7 +168,7 @@ const Announcement = () => {
                             {announcement.title}
                         </h3>
                         <div className="flex flex-col items-center justify-between h-[140px]">
-                            <p className="text-gray-700 text-sm leading-relaxed">
+                            <p className="text-gray-700 text-sm leading-relaxed text-justify">
                                 {announcement.content}
                             </p>
                             {announcement.action === "button" ? (

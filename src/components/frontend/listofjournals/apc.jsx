@@ -143,9 +143,9 @@ const Apc = () => {
                 <div className="flex mt-8">
                     <Sidebar journalAbbreviation={journalAbbrevation} dynamicProps={journal} />
                     <div className="w-[75vw] ps-6 h-auto">
-                        <p className="text-3xl text-blue-800 font-bold mb-5">{journal?.journalName}</p>
-                        <p className="border-b border-gray-300 mb-8"></p>
-                        <p className="text-xl text-gray-700 font-semibold mb-8">Article Processing Charges</p>
+                        <p className="text-3xl text-blue-800 font-bold mb-3">{journal?.journalName}</p>
+                        <p className="border-b border-gray-300 mb-4"></p>
+                        <p className="text-xl text-gray-700 font-semibold mb-2">Article Processing Charges</p>
                         <div className="overflow-x-auto">
                             <table className="min-w-full bg-white border border-gray-300 rounded-lg shadow-md">
                                 <thead>
