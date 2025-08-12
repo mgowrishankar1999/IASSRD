@@ -11,7 +11,11 @@ function Aboutus() {
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const navigate = useNavigate();
     const { journals, loading: contextLoading, error: contextError } = useContext(JournalContext);
+<<<<<<< HEAD
     // console.log(journals.length)
+=======
+    console.log(journals.length)
+>>>>>>> 3372c9f6e69e564813b3c03bdfa3e539ff9a581c
 
 
     // Static menu items for the sidebar

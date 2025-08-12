@@ -1057,6 +1057,7 @@ const SearchResults = () => {
         articles.some((article) => article.journalId === journal.journalId)
     );
 
+<<<<<<< HEAD
     const handleDownload = async (article) => {
         if (!article || !article.articleFile) {
             console.error("Article or article file is missing.");
@@ -1095,6 +1096,8 @@ const SearchResults = () => {
         }
     };
 
+=======
+>>>>>>> 3372c9f6e69e564813b3c03bdfa3e539ff9a581c
     return (
         <>
             <Navbar isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} />
