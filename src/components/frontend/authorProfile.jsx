@@ -639,12 +639,7 @@ const AuthorProfile = () => {
                 setAuthorsMap(authorsMapping);
 
                 // Create authors map for co-authors
-                const authorsMapping = authorsData.reduce((acc, author) => {
-                    acc[author.authorId] = `${author.firstName} ${author.lastName}`;
-                    return acc;
-                }, {});
-                setAuthorsMap(authorsMapping);
-
+    
                 const affiliationsRes = await axios.get(`${BASE_URL}/affiliations`);
                 // console.log("Affiliations response:", affiliationsRes.data);
                 if (!affiliationsRes.data.success) {

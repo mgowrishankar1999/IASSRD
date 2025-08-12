@@ -1057,47 +1057,6 @@ const SearchResults = () => {
         articles.some((article) => article.journalId === journal.journalId)
     );
 
-<<<<<<< HEAD
-    const handleDownload = async (article) => {
-        if (!article || !article.articleFile) {
-            console.error("Article or article file is missing.");
-            alert("Unable to download: Article or file is missing.");
-            return;
-        }
-
-        const fileUrl = `https://iassrd.com${article.articleFile}`;
-
-        try {
-            const newWindow = window.open(fileUrl, "_blank");
-            if (!newWindow) {
-                console.warn("Window opening was blocked or failed. Prompting manual download.");
-                alert("Pop-up blocked. Please allow pop-ups or download the file manually.");
-                const link = document.createElement("a");
-                link.href = fileUrl;
-                link.download = "";
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            }
-
-            const nextDownloadCount = parseInt(article.downloads) + 1;
-
-            await axios.patch(
-                `${BASE_URL}/articles/${article.articleId}/update-downloads`,
-                null,
-                {
-                    params: { downloads: nextDownloadCount },
-                    headers: { "Content-Type": "application/json" },
-                }
-            );
-        } catch (error) {
-            console.error("Error updating download count:", error);
-            alert("An error occurred while updating the download count. The file should still download.");
-        }
-    };
-
-=======
->>>>>>> 3372c9f6e69e564813b3c03bdfa3e539ff9a581c
     return (
         <>
             <Navbar isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} />
