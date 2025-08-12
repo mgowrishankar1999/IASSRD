@@ -40,7 +40,7 @@ const FellowMembership = () => {
             : member.membershipType?.trim() || "Unknown",
           name: member.name?.trim() || "Unknown",
         }));
-        console.log("Normalized members:", normalizedMembers); // Debug: Log normalized data
+        // console.log("Normalized members:", normalizedMembers); // Debug: Log normalized data
         setMembers(normalizedMembers);
         setLoading(false);
       } catch (err) {
@@ -56,7 +56,7 @@ const FellowMembership = () => {
 
   // Filter members based on category and search query
   const filteredMembers = useMemo(() => {
-    console.log("Filtering with category:", selectedCategory, "and search:", searchQuery); // Debug
+    // console.log("Filtering with category:", selectedCategory, "and search:", searchQuery); // Debug
     let result = [...members];
 
     // Filter by category (case-insensitive comparison)
@@ -64,7 +64,7 @@ const FellowMembership = () => {
       result = result.filter((member) => {
         const membershipType = (member.membershipType || "").toLowerCase();
         const category = selectedCategory.toLowerCase();
-        console.log("Checking member:", member.name, "type:", membershipType, "against category:", category); // Debug
+        // console.log("Checking member:", member.name, "type:", membershipType, "against category:", category); // Debug
         return membershipType === category;
       });
     }
@@ -78,13 +78,13 @@ const FellowMembership = () => {
       });
     }
 
-    console.log("Filtered members:", result); // Debug
+    // console.log("Filtered members:", result); // Debug
     return result;
   }, [members, selectedCategory, searchQuery]);
 
   // Handle category change
   const handleCategoryChange = (category) => {
-    console.log("Selected category:", category); // Debug
+    // console.log("Selected category:", category); // Debug
     setSelectedCategory(category);
   };
 

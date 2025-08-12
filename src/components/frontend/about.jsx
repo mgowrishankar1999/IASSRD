@@ -1,13 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect , useContext } from 'react';
 import axios from 'axios';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 import Navbar from './navbar';
 import Footer from './footer';
+import JournalContext from "../common/journalContext";
+
 
 function Aboutus() {
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const navigate = useNavigate();
+    const { journals, loading: contextLoading, error: contextError } = useContext(JournalContext);
+    // console.log(journals.length)
+
 
     // Static menu items for the sidebar
     const menuItems = [
@@ -42,7 +47,7 @@ function Aboutus() {
             <div className={`px-[80px] py-[30px] ${isSearchOpen ? "mt-[160px]" : "mt-[80px]"}`}>
                 <div className="flex">
                     <div className="w-[25vw] mr-4">
-                <p className="text-3xl text-gray-800 font-bold mb-1">About Us</p>   
+                        <p className="text-3xl text-gray-800 font-bold mb-1">About Us</p>
                         <p className="border-t border-gray-400 mb-4"></p>
                         {/* {/* <p className="text-gray-800 text-lg font-bold">Menu</p> */}
                         <ul className="mt-1 space-y-2">
@@ -75,7 +80,7 @@ function Aboutus() {
                         </div>
                         <p className="text-gray-800 text-[17px] pt-4">We are dedicated to uniting social science disciplines with practical insight, thereby empowering global communities and enriching policy and decision-making processes.</p>
                         <h1 className="text-2xl text-gray-800 font-semibold mt-4">Our Journals</h1>
-                        <p className="pt-3 text-[17px] text-gray-800 font-normal">IASSRD publishes a distinguished collection of 18 double-blind, peer-reviewed, open-access journals covering both traditional and contemporary themes in social sciences and related fields. Since our founding in 2020, our journals have become a reputable venue for global researchers to disseminate new findings, theoretical contributions, and empirical studies.</p>
+                        <p className="pt-3 text-[17px] text-gray-800 font-normal text-justify">IASSRD publishes a distinguished collection of {journals?.length} double-blind, peer-reviewed, open-access journals covering both traditional and contemporary themes in social sciences and related fields. Since our founding in 2020, our journals have become a reputable venue for global researchers to disseminate new findings, theoretical contributions, and empirical studies.</p>
                         <p className="text-gray-800 font-bold pt-2">Subject Areas Include:</p>
                         <ul className="mt-1 list-disc pl-3" style={{ listStylePosition: 'inside' }}>
                             <li>Sociology and Social Policy</li>
@@ -117,7 +122,7 @@ function Aboutus() {
                             <a href="https://iassrd.com/joinus-editorial" target="_blank" rel="noopener noreferrer">Become a Reviewer</a>
                         </p>
                         <h1 className="text-2xl text-gray-800 font-semibold mt-4">Fellow Membership</h1>
-                        <p className="text-[17px] text-gray-800 pt-3">The IASSRD Fellow Membership honors individuals who have made outstanding contributions to the advancement of social sciences. Fellows are recognized as leaders in their fields and are granted opportunities to shape the academy’s future directions.</p>
+                        <p className="text-[17px] text-gray-800 pt-3 text-justify">The IASSRD Fellow Membership honors individuals who have made outstanding contributions to the advancement of social sciences. Fellows are recognized as leaders in their fields and are granted opportunities to shape the academy’s future directions.</p>
                         <p className="text-gray-800 font-bold pt-2">Fellow Membership Benefits:</p>
                         <ul className="mt-1 list-disc pl-3" style={{ listStylePosition: 'inside' }}>
                             <li>International recognition as an IASSRD Fellow</li>
@@ -128,7 +133,7 @@ function Aboutus() {
                             <a href="https://iassrd.com/joinus-fellowmember" target="_blank" rel="noopener noreferrer">Apply for Fellowship</a>
                         </p>
                         <h1 className="text-2xl text-gray-800 font-semibold mt-4">Engage with Us</h1>
-                        <p className="text-[17px] text-gray-800 pt-3">We welcome scholars, students, educators, and professionals from around the world to engage with IASSRD. Whether you are looking to publish your work, attend insightful academic events, collaborate on projects, or serve on editorial boards, we provide the platform and support to elevate your academic journey.</p>
+                        <p className="text-[17px] text-gray-800 pt-3 text-justify">We welcome scholars, students, educators, and professionals from around the world to engage with IASSRD. Whether you are looking to publish your work, attend insightful academic events, collaborate on projects, or serve on editorial boards, we provide the platform and support to elevate your academic journey.</p>
                         <p className="text-[17px] text-gray-800 pt-3">For inquiries regarding publication, membership, or collaborations, please contact us:</p>
                         <p className="text-gray-800 font-bold pt-2">Email:</p>
                         <ul className="mt-1 list-disc pl-3" style={{ listStylePosition: 'inside' }}>

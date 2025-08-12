@@ -611,7 +611,7 @@ const Journals = () => {
             const role = JSON.parse(user);
             roletype = role?.role || null; // Fallback to null if role is undefined
         }
-        console.log(roletype);
+        // console.log(roletype);
     } catch (error) {
         console.error("Error parsing user from localStorage:", error);
     }

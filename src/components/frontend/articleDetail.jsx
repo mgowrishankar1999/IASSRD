@@ -678,7 +678,7 @@ function Articledetail() {
     // Handle social sharing
     const handleSocialShare = (platform) => {
         incrementShareCount(article.articleId, shareCount);
-        console.log(`Sharing on ${platform}`);
+        // console.log(`Sharing on ${platform}`);
     };
 
     // Parse references
@@ -747,11 +747,11 @@ function Articledetail() {
                     setJournalName(matchedJournal.journalName);
                     setJournalAbbrevation(matchedJournal.abbrevation);
                     setJournalProps(matchedJournal);
-                    console.log('Updated journalProps:', matchedJournal);
+                    // console.log('Updated journalProps:', matchedJournal);
                 } else {
                     throw new Error(`No journal found for journalId: ${matchedArticle.journalId}`);
                 }
-                console.log(journalProps)
+                // console.log(journalProps)
 
                 // Fetch authors
                 const authorsResponse = await axios.get(`${BASE_URL}/authors`);
@@ -1192,10 +1192,10 @@ function Articledetail() {
                                             </span>
                                         )}
                                     </p>
-                                    <p id="how-to-cite">
+                                    <p id="how-to-cite "class='text-justify'>
                                         <strong>How to Cite:</strong> {article.howToCite}
                                     </p>
-                                    <p id="copyright">
+                                    <p id="copyright" class='text-justify'>
                                         <strong>Copyright:</strong> © {new Date(article.published).getFullYear()} the
                                         Author(s). This article is an open access article distributed under the terms and
                                         conditions of the Creative Commons Attribution (CC-BY) 4.0 license (

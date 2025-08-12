@@ -41,7 +41,7 @@ const UniversityProfile = () => {
     useEffect(() => {
         // Decode the URL-encoded name and remove spaces
         const decodedAffName = decodeURIComponent(affName).replace(/\s+/g, '');
-        console.log("University Name from params (combined):", decodedAffName);
+        // console.log("University Name from params (combined):", decodedAffName);
 
         const fetchData = async () => {
             setIsLoading(true);
@@ -56,7 +56,7 @@ const UniversityProfile = () => {
             try {
                 // Fetch all affiliations to find the matching affId
                 const affiliationsRes = await axios.get(`${BASE_URL}/affiliations`);
-                console.log("Affiliations response:", affiliationsRes.data);
+                // console.log("Affiliations response:", affiliationsRes.data);
                 if (!affiliationsRes.data.success) {
                     throw new Error(affiliationsRes.data.message || "Error fetching affiliations.");
                 }
@@ -72,12 +72,12 @@ const UniversityProfile = () => {
                 }
 
                 const affId = targetAff.affId;
-                console.log("Found affId:", affId);
+                // console.log("Found affId:", affId);
 
                 // Fetch university details using the affId
                 let affiliationRes;
                 try {
-                    console.log(`Attempting GET ${BASE_URL}/affiliations/${affId}`);
+                    // console.log(`Attempting GET ${BASE_URL}/affiliations/${affId}`);
                     affiliationRes = await axios.get(`${BASE_URL}/affiliations/${affId}`);
                 } catch (err) {
                     if (err.response?.status === 405) {
@@ -91,7 +91,7 @@ const UniversityProfile = () => {
                     throw new Error(affiliationRes.data.message || "Affiliation not found.");
                 }
                 const affiliationData = affiliationRes.data.data[0];
-                console.log("Affiliation Data:", affiliationData);
+                // console.log("Affiliation Data:", affiliationData);
                 setUniversity(affiliationData);
 
                 // Fetch authors
@@ -106,11 +106,11 @@ const UniversityProfile = () => {
                     const matchesAffiliation = author.university?.trim().toLowerCase() === affiliationData.affName?.trim().toLowerCase();
                     return hasValidId && matchesAffiliation;
                 });
-                console.log("Filtered Authors:", affiliationAuthors);
+                // console.log("Filtered Authors:", affiliationAuthors);
                 setAuthors(affiliationAuthors);
 
                 const authorIds = affiliationAuthors.map(author => String(author.authorId));
-                console.log("Author IDs:", authorIds);
+                // console.log("Author IDs:", authorIds);
 
                 // Fetch articles
                 const articlesRes = await axios.get(`${BASE_URL}/articles`);
@@ -118,14 +118,14 @@ const UniversityProfile = () => {
                     throw new Error(articlesRes.data.message || "Error fetching articles.");
                 }
                 const articlesData = articlesRes.data.data;
-                console.log("Articles Data:", articlesData);
+                // console.log("Articles Data:", articlesData);
 
                 const affiliationArticles = articlesData.filter(article => {
                     if (!article.authorIds) return false;
                     const articleAuthorIds = article.authorIds.split(",").map(id => id.trim());
                     return articleAuthorIds.some(id => authorIds.includes(id));
                 });
-                console.log("Filtered Articles:", affiliationArticles);
+                // console.log("Filtered Articles:", affiliationArticles);
                 setArticles(affiliationArticles);
                 setFilteredArticles(affiliationArticles);
 
@@ -135,7 +135,7 @@ const UniversityProfile = () => {
                     throw new Error(journalsRes.data.message || "Error fetching journals.");
                 }
                 const journalsData = journalsRes.data.data;
-                console.log("Journals Data:", journalsData);
+                // console.log("Journals Data:", journalsData);
 
                 const journalMap = {};
                 journalsData.forEach(journal => {
@@ -144,7 +144,7 @@ const UniversityProfile = () => {
                         abbreviation: journal.abbreviation || journal.abbrevation || "N/A",
                     };
                 });
-                console.log("Journal Map:", journalMap);
+                // console.log("Journal Map:", journalMap);
                 setJournals(journalMap);
 
                 const articleDetails = affiliationArticles.map(article => {
@@ -170,7 +170,7 @@ const UniversityProfile = () => {
                     };
                 });
                 setArticleDetails(articleDetails);
-                console.log("Article Details:", articleDetails);
+                // console.log("Article Details:", articleDetails);
             } catch (err) {
                 console.error("Error fetching data:", err);
                 setError(err.message || "Failed to load data. Please try again later.");

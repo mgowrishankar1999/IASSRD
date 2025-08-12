@@ -250,9 +250,11 @@ import cover3 from "../../assets/cover3.jpg";
 // Fallback images for journals without coverPage
 const FALLBACK_IMAGES = [cover1, cover2, cover3];
 
+
+
 // Reusable Testimonial Card Component
 const TestimonialCard = ({ testimonial }) => (
-    <div className="testimonial-card mb-3">
+    <div className="testimonial-card mb-4">
         <Link to={`/journal/${testimonial.journalAbbrevation}`}>
             <img src={testimonial.image} alt={testimonial.alt} className="cursor-pointer object-contain transition-transform duration-1000 ease-in-out hover:scale-110 origin-center" />
         </Link>
@@ -264,7 +266,7 @@ const TestimonialCard = ({ testimonial }) => (
 // Testimonial Carousel Component
 const TestimonialCarousel = ({ testimonials }) => {
 
-    console.log(testimonials)
+    // console.log(testimonials)
     const scrollContainerRef = useRef(null);
     const [isPaused, setIsPaused] = useState(false);
 
@@ -291,7 +293,7 @@ const TestimonialCarousel = ({ testimonials }) => {
           .scroll-container {
             display: flex;
             width: fit-content;
-            animation: scrollTestimonials 230s linear infinite;
+            animation: scrollTestimonials 220s linear infinite;
           }
           .scroll-container.paused {
             animation-play-state: paused;
@@ -333,42 +335,52 @@ const TestimonialCarousel = ({ testimonials }) => {
 };
 
 // Hero Section Component
-const HeroSection = ({ isSearchOpen, testimonials }) => (
-    <div
-        className={`h-[64vh] w-full  bg-hero flex flex-col justify-between ${isSearchOpen ? "mt-[180px]" : "mt-[90px]"
-            } px-[80px] text-center text-white`}
-        role="region"
-        aria-label="Hero section"
-    >
-        <div className="pt-[30px] pb-[25px] mb-3">
-            <h1 className="text-5xl font-thin">Advancing Research Globally</h1>
-            <p className="text-xl font-normal mt-4">
-              Over 10,000 published articles across 30+ open-access journals dedicated to academic excellence.
-            </p>
-            <div className="flex justify-center space-x-4 mt-8">
-                <a
-                    href="/submitarticle"
-                    className="bg-green-600 py-2 px-4 font-medium text-white hover:bg-green-700 rounded-md transition-all duration-300"
-                >
-                    Submit Your Article
-                </a>
-                <a
-                    href="/journal"
-                    className="border border-white py-2 px-4 font-medium text-white hover:text-red-500 rounded-md transition-all duration-300"
-                >
-                    Browse our Journals
-                </a>
+const HeroSection = ({ isSearchOpen, testimonials }) => {
+
+    const { journals } = useContext(JournalContext) || { journals: [] };
+
+    return (
+
+
+
+        <div
+            className={`h-[60vh] w-full  bg-hero flex flex-col justify-between ${isSearchOpen ? "mt-[180px]" : "mt-[90px]"
+                } px-[80px] text-center text-white`}
+            role="region"
+            aria-label="Hero section"
+        >
+            <div className="py-[10px] pb-[25px] mb-3">
+                <h1 className="text-5xl font-thin">Advancing Research Globally</h1>
+                <p className="text-xl font-normal mt-4">
+                    Over 2000+ published articles across {journals?.length} open-access journals dedicated to academic excellence.
+                </p>
+                <div className="flex justify-center space-x-4 mt-8">
+                    <a
+                        href="/submitarticle"
+                        className="bg-green-600 py-2 px-4 font-medium text-white hover:bg-green-700 rounded-md transition-all duration-300"
+                    >
+                        Submit Your Article
+                    </a>
+                    <a
+                        href="/journal"
+                        className="border border-white py-2 px-4 font-medium text-white hover:text-red-500 rounded-md transition-all duration-300"
+                    >
+                        Browse our Journals
+                    </a>
+                </div>
             </div>
+            <TestimonialCarousel testimonials={testimonials} />
         </div>
-        <TestimonialCarousel testimonials={testimonials} />
-    </div>
-);
+    )
+
+}
 
 // Main Home Component
 const Home = () => {
     const { journals } = useContext(JournalContext) || { journals: [] };
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [testimonials, setTestimonials] = useState([]);
+
 
     // Generate testimonials from journal data
     useEffect(() => {
@@ -390,6 +402,8 @@ const Home = () => {
             // author: TESTIMONIAL_CONTENT[index % TESTIMONIAL_CONTENT.length].author,
             journalAbbrevation: journal.abbrevation,
             // alt: journal.title || "Journal Cover",
+            loading: "lazy", // Enable lazy loading for images
+
         }));
 
         setTestimonials(shuffleArray(generatedTestimonials));

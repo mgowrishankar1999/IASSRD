@@ -290,11 +290,11 @@ const JournalDetail = () => {
 
 
     const { journals, loading: contextLoading, error: contextError } = useContext(JournalContext);
-    console.log('journals array:', journals);
+    // console.log('journals array:', journals);
 
 
     const journal = Array.isArray(journals) ? journals.find((j) => j.abbrevation === journalAbbrevation) : null;
-    console.log('Found journal:', journal);
+    // console.log('Found journal:', journal);
 
     const [loading, setLoading] = useState(contextLoading);
     const [error, setError] = useState(contextError);

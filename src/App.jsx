@@ -20,6 +20,9 @@ import Subjectarea from './components/frontend/listofjournals/subjectarea'
 import AuthorguideLines from './components/frontend/listofjournals/authorGuidelines'
 
 
+// 404 page not found 
+import NoPageFound from './components/common/noPageFound'
+
 
 
 // search results routes-------------
@@ -39,7 +42,7 @@ import ApcFrontned from './components/frontend/listofjournals/apc'
 import ProfileSearch from './components/frontend/profileSearch'
 import AuthorProfile from './components/frontend/authorProfile'
 import UniversityProfile from './components/frontend/universityProfile'
-import CountryProfile from  './components/frontend/countryProfile'
+import CountryProfile from './components/frontend/countryProfile'
 
 
 import Peerreview from './components/frontend/peerReview'
@@ -123,7 +126,7 @@ function App() {
 
 
 
-         {/* profile search routes------------- */}
+        {/* profile search routes------------- */}
 
 
         <Route path="/profile-search" element={<ProfileSearch />} />
@@ -132,7 +135,7 @@ function App() {
         <Route path="/country_profile/:name" element={<CountryProfile />} />
 
 
-              
+
         <Route path="/peer-review" element={<Peerreview />} />
         <Route path="/publication-ethics" element={<PublicationEthics />} />
         <Route path="/editorial-policy" element={<Editorialpolicy />} />
@@ -200,6 +203,10 @@ function App() {
         <Route path="/impactfactorstab" element={<ImpactFactorstab />} />
         <Route path="/addnewimpactfactors" element={<AddNewImpactFactors />} />
 
+
+        {/* no page fount route  */}
+
+        <Route path="*" element={<NoPageFound />} />
       </>
     )
   )

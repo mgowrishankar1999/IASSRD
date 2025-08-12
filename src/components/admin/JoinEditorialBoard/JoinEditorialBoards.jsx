@@ -595,7 +595,7 @@ const JoinEditorialBoards = () => {
             const role = JSON.parse(user);
             roletype = role?.role || null; // Fallback to null if role is undefined
         }
-        console.log(roletype);
+        // console.log(roletype);
     } catch (error) {
         console.error("Error parsing user from localStorage:", error);
     }
@@ -967,7 +967,7 @@ const JoinEditorialBoards = () => {
                                     <td className="p-3 flex gap-2">
                                         {item.photo && (
                                             <a
-                                                href={`https://iassrd.com/uploads/${item.photo}`}
+                                                href={`https://iassrd.com/${item.photo}`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="text-blue-600 hover:text-blue-800"

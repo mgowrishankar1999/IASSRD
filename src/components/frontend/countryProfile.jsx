@@ -43,11 +43,11 @@ const CountryProfile = () => {
                 if (!name?.trim()) {
                     throw new Error("Invalid country name.");
                 }
-                console.log("Fetching data for country:", name);
-                console.log("Author IDs:", authorIds);
+                // console.log("Fetching data for country:", name);
+                // console.log("Author IDs:", authorIds);
 
                 const authorsRes = await axios.get(`${BASE_URL}/authors`, { timeout: 5000 });
-                console.log("Authors response:", authorsRes.data);
+                // console.log("Authors response:", authorsRes.data);
                 if (!authorsRes.data.success) {
                     throw new Error(authorsRes.data.message || "Error fetching authors.");
                 }
@@ -66,7 +66,7 @@ const CountryProfile = () => {
                     .map(author => String(author.authorId));
 
                 const articlesRes = await axios.get(`${BASE_URL}/articles`, { timeout: 5000 });
-                console.log("Articles response:", articlesRes.data);
+                // console.log("Articles response:", articlesRes.data);
                 if (!articlesRes.data.success) {
                     throw new Error(articlesRes.data.message || "Error fetching articles.");
                 }
@@ -80,7 +80,7 @@ const CountryProfile = () => {
                 );
 
                 const journalsRes = await axios.get(`${BASE_URL}/journals`, { timeout: 5000 });
-                console.log("Journals response:", journalsRes.data);
+                // console.log("Journals response:", journalsRes.data);
                 if (!journalsRes.data.success) {
                     throw new Error(journalsRes.data.message || "Error fetching journals.");
                 }

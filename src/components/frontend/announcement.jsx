@@ -103,7 +103,7 @@ const Announcement = () => {
             try {
                 const response = await fetch('https://iassrd.com:8081/api/v1/call-for-papers');
                 const data = await response.json();
-                console.log(data);
+                // console.log(data);
                 if (data.success && data.data.length > 0) {
                     const filePath = data.data[0].file;
                     setCallForPapersUrl(`https://iassrd.com/uploads${filePath}`);
@@ -168,7 +168,7 @@ const Announcement = () => {
                             {announcement.title}
                         </h3>
                         <div className="flex flex-col items-center justify-between h-[140px]">
-                            <p className="text-gray-700 text-sm leading-relaxed">
+                            <p className="text-gray-700 text-sm leading-relaxed text-justify">
                                 {announcement.content}
                             </p>
                             {announcement.action === "button" ? (

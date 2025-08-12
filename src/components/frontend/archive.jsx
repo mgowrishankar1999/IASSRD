@@ -299,7 +299,7 @@ const Archive = () => {
   const [issues, setIssues] = useState([]);
 
   useEffect(() => {
-    console.log("JournalContext State:", { journals, contextLoading, contextError, journalAbbrevation, journal });
+    // console.log("JournalContext State:", { journals, contextLoading, contextError, journalAbbrevation, journal });
 
     const fetchIssues = async () => {
       setLoading(true);
@@ -323,7 +323,7 @@ const Archive = () => {
           (issue) => issue.journalsId.toString() === journalId.toString()
         );
 
-        console.log("Fetched Issues in Archive:", filteredIssues);
+        // console.log("Fetched Issues in Archive:", filteredIssues);
         setIssues(filteredIssues);
         setLoading(false);
       } catch (err) {
@@ -377,7 +377,7 @@ const Archive = () => {
 
   // Handle issue selection
   const handleIssueSelect = (year, volume, issue, months) => {
-    console.log("Issue Selected:", { year, volume, issue, months });
+    // console.log("Issue Selected:", { year, volume, issue, months });
     navigate(`/journal/${journalAbbrevation}/volume_${volume}/issue_${issue}`);
   };
 

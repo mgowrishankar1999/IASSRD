@@ -64,47 +64,47 @@ function WhyPublish() {
                             The <strong>International Academy for Social Sciences Research and Development (IASSRD)</strong> is a leading global platform dedicated to advancing knowledge, scholarly communication, and impactful research in the social sciences and humanities. By publishing with IASSRD, you join a vibrant international community of researchers, educators, and policy thinkers committed to fostering interdisciplinary dialogue and societal progress.
                         </p>
                         <h2 className="text-2xl text-gray-800 font-semibold mt-4">Global Reach and Academic Impact</h2>
-                        <p className="text-[17px] text-gray-800 pt-3">
+                        <p className="text-[17px] text-gray-800 pt-3 text-justify">
                             All IASSRD journals are open-access, ensuring your work is freely available to scholars, educators, practitioners, and policymakers around the world. Our platform attracts wide readership from academic institutions, NGOs, government bodies, and research centers—maximizing your paper’s visibility, engagement, and real-world impact.
                         </p>
                         <h2 className="text-2xl text-gray-800 font-semibold mt-4">Rigorous Double-Blind Peer Review</h2>
-                        <p className="text-[17px] text-gray-800 pt-3">
+                        <p className="text-[17px] text-gray-800 pt-3 text-justify">
                             We maintain a robust double-blind peer review process to ensure the credibility, scholarly merit, and ethical standards of every published article. Expert reviewers evaluate submissions for originality, methodological soundness, theoretical contribution, and relevance—helping you refine and elevate your work to meet the highest academic standards.
                         </p>
                         <h2 className="text-2xl text-gray-800 font-semibold mt-4">Timely and Transparent Publication Process</h2>
-                        <p className="text-[17px] text-gray-800 pt-3">
+                        <p className="text-[17px] text-gray-800 pt-3 text-justify">
                             We value academic timeliness and strive for swift publication turnaround without compromising quality. Once your article is accepted, it is published in the upcoming issue with minimal delay, enabling you to share your findings quickly with the global academic community.
                         </p>
                         <h2 className="text-2xl text-gray-800 font-semibold mt-4">Dedicated Editorial Support</h2>
-                        <p className="text-[17px] text-gray-800 pt-3">
+                        <p className="text-[17px] text-gray-800 pt-3 text-justify">
                             Our experienced editorial team is committed to guiding authors through every step of the publication process—from formatting and compliance checks to revision support and copyediting. You receive constructive feedback and professional assistance to ensure your work is publication-ready.
                         </p>
                         <h2 className="text-2xl text-gray-800 font-semibold mt-4">Fully Open Access – No Subscription Barriers</h2>
-                        <p className="text-[17px] text-gray-800 pt-3">
+                        <p className="text-[17px] text-gray-800 pt-3 text-justify">
                             IASSRD is proud to offer a fully open-access publishing model, enabling unrestricted access to all published content. Your research is free to read, download, and cite—ensuring maximum exposure without the constraints of paywalls or institutional access.
                         </p>
                         <h2 className="text-2xl text-gray-800 font-semibold mt-4">Diverse Subject Coverage and Interdisciplinary Platforms</h2>
-                        <p className="text-[17px] text-gray-800 pt-3">
+                        <p className="text-[17px] text-gray-800 pt-3 text-justify">
                             With journals covering a broad range of disciplines—sociology, education, political science, psychology, economics, gender studies, law, communication, and more—IASSRD provides a comprehensive platform for both specialized and interdisciplinary research. Whether you’re contributing theoretical insights or applied solutions, we offer a suitable publication avenue.
                         </p>
                         <h2 className="text-2xl text-gray-800 font-semibold mt-4">Strong Indexing and Discoverability</h2>
-                        <p className="text-[17px] text-gray-800 pt-3">
+                        <p className="text-[17px] text-gray-800 pt-3 text-justify">
                             Our journals are indexed in Google Scholar, ResearchGate, Crossref (DOI), and Scholar9, making your work searchable, citable, and academically visible. Indexed visibility enhances your research profile and opens opportunities for future citations, collaborations, and recognition.
                         </p>
                         <h2 className="text-2xl text-gray-800 font-semibold mt-4">Trusted Reputation and Ethical Standards</h2>
-                        <p className="text-[17px] text-gray-800 pt-3">
+                        <p className="text-[17px] text-gray-800 pt-3 text-justify">
                             IASSRD is recognized as a credible academic publisher with a commitment to ethical research, transparency, and editorial integrity. Authors benefit from being associated with a trusted institution that values academic freedom and responsible scholarship.
                         </p>
                         <h2 className="text-2xl text-gray-800 font-semibold mt-4">Networking and Collaboration Opportunities</h2>
-                        <p className="text-[17px] text-gray-800 pt-3">
+                        <p className="text-[17px] text-gray-800 pt-3 text-justify">
                             Publishing with IASSRD gives you access to a growing network of international scholars, editors, and practitioners. Engage with leading voices in your discipline, collaborate on future research, and participate in conferences, thematic issues, and special projects that advance both your career and your field.
                         </p>
                         <h2 className="text-2xl text-gray-800 font-semibold mt-4">Retain Your Rights</h2>
-                        <p className="text-[17px] text-gray-800 pt-3">
+                        <p className="text-[17px] text-gray-800 pt-3 text-justify">
                             Authors publishing with IASSRD retain copyright of their work while benefiting from wide dissemination. This allows you to control how your research is shared and used while reaching global audiences through our platform.
                         </p>
                         <h2 className="text-2xl text-gray-800 font-semibold mt-4">Join Us Today!</h2>
-                        <p className="text-[17px] text-gray-800 pt-3">
+                        <p className="text-[17px] text-gray-800 pt-3 text-justify">
                             Publishing with IASSRD means contributing to the global advancement of knowledge in the social sciences. Whether you're an early-career researcher or an established academic, we provide a professional, supportive, and high-impact publishing experience.
                         </p>
                         <p className="text-[17px] text-blue-600 hover:underline pt-2">

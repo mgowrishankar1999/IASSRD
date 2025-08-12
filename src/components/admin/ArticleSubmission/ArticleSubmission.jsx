@@ -2801,7 +2801,7 @@ const ArticleSubmission = () => {
             const role = JSON.parse(user);
             roletype = role?.role || null;
         }
-        console.log("Role type:", roletype);
+        // console.log("Role type:", roletype);
     } catch (error) {
         console.error("Error parsing user from localStorage:", error);
     }

@@ -625,7 +625,7 @@
                 const response = await axios.post(`${BASE_URL}/auth/login`, formData);
                 const result = response.data.data[0];
 
-                console.log("Login Success:", result);
+                // console.log("Login Success:", result);
 
                 localStorage.setItem("token", result.token);
                 localStorage.setItem("user", JSON.stringify(result.user));

@@ -171,6 +171,7 @@
 import React, { useState, useEffect } from "react";
 import { FaDownload, FaEye } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Latesttabs = () => {
     const [activeTab, setActiveTab] = useState("Recently Published");
@@ -180,6 +181,8 @@ const Latesttabs = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [expandedAbstracts, setExpandedAbstracts] = useState({});
+    const BASE_URL = "https://iassrd.com:8081/api/v1";
+
 
 
     // Helper function to format author display
@@ -292,6 +295,43 @@ const Latesttabs = () => {
 
         fetchData();
     }, []);
+    const handleDownload = async (article) => {
+        if (!article || !article.articleFile) {
+            console.error("Article or article file is missing.");
+            alert("Unable to download: Article or file is missing.");
+            return;
+        }
+
+        const fileUrl = `https://iassrd.com${article.articleFile}`;
+
+        try {
+            const newWindow = window.open(fileUrl, "_blank");
+            if (!newWindow) {
+                console.warn("Window opening was blocked or failed. Prompting manual download.");
+                alert("Pop-up blocked. Please allow pop-ups or download the file manually.");
+                const link = document.createElement("a");
+                link.href = fileUrl;
+                link.download = "";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+
+            const nextDownloadCount = parseInt(article.downloads) + 1;
+
+            await axios.patch(
+                `${BASE_URL}/articles/${article.articleId}/update-downloads`,
+                null,
+                {
+                    params: { downloads: nextDownloadCount },
+                    headers: { "Content-Type": "application/json" },
+                }
+            );
+        } catch (error) {
+            console.error("Error updating download count:", error);
+            alert("An error occurred while updating the download count. The file should still download.");
+        }
+    };
 
     if (loading) {
         return <div className="text-center py-10">Loading...</div>;
@@ -315,7 +355,7 @@ const Latesttabs = () => {
         return 0;
     }).slice(0, 5);
 
-    console.log(filteredArticles)
+    // console.log(filteredArticles)
     return (
         <>
             <div className="flex items-center space-x-6 px-[80px] py-[15px] overflow-x-auto">
@@ -379,8 +419,8 @@ const Latesttabs = () => {
                                     className="text-indigo-600 hover:underline ml-1"
                                 >
                                     Volume {article.volume}, Issue {article.issue}
-                                </Link>{" "}
-                                {article.monthFrom} - {article.monthTo} {article.year}
+                                </Link>{", "}
+                                ({article.monthFrom} - {article.monthTo}) {article.year}
                                 <span className="ml-2">Pages: {article.pageFrom}-{article.pageTo}</span>
                             </p>
                             {article.doi && (
@@ -397,7 +437,7 @@ const Latesttabs = () => {
                                 <div className="text-sm text-gray-700 mb-4">
                                     <span className="font-medium">Abstract: </span>
                                     <p
-                                        className={`${expandedAbstracts[article.articleId] ? "" : "line-clamp-2"}`}
+                                        className={`text-justify ${expandedAbstracts[article.articleId] ? "" : "line-clamp-2"}`}
                                     >
                                         {article.abstractText.replace(/<[^>]+>/g, "")}
                                     </p>
@@ -410,7 +450,7 @@ const Latesttabs = () => {
                                 </div>
                             )}
                             <div className="flex space-x-4">
-                                <a
+                                {/* <a
                                     href={`https://iassrd.com${article.articleFile}`}
                                     className="flex items-center space-x-2 text-indigo-600 hover:text-indigo-800 transition-colors duration-300"
                                     target="_blank"
@@ -418,7 +458,14 @@ const Latesttabs = () => {
                                 >
                                     <FaDownload />
                                     <span>Download PDF</span>
-                                </a>
+                                </a> */}
+                                <button
+                                    onClick={() => handleDownload(article)}
+                                    className="flex items-center space-x-2 text-indigo-600 hover:text-indigo-800 transition-colors duration-300"
+                                >
+                                    <FaDownload />
+                                    <span>Download PDF</span>
+                                </button>
                                 <Link
                                     to={`/articles/volume_${article.volume}/issue_${article.issue}/${article.articleKey}`}
                                     className="flex items-center space-x-2 text-indigo-600 hover:text-indigo-800 transition-colors duration-300"

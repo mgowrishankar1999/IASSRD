@@ -85,8 +85,8 @@ const EditorialBoard = () => {
                 <div className="flex mt-8">
                     <Sidebar journalAbbreviation={journalAbbrevation} dynamicProps={journal} />
                     <div className="w-[75vw] ps-6 h-auto">
-                        <p className="text-3xl text-blue-800 font-bold mb-5">{journal?.journalName}</p>
-                        <p className="border-b border-gray-300 mb-8"></p>
+                        <p className="text-3xl text-blue-800 font-bold mb-3">{journal?.journalName}</p>
+                        <p className="border-b border-gray-300 mb-4"></p>
 
                         {/* Breadcrumb */}
                         {/* <div className="text-sm text-gray-600 mb-6 flex flex-wrap items-center space-x-2">
@@ -102,7 +102,7 @@ const EditorialBoard = () => {
                         </div> */}
 
                         {/* Editorial Board Members Section */}
-                        <div className="flex items-center justify-between mb-8 border-b-2 border-blue-200 pb-4">
+                        <div className="flex items-center justify-between mb-1 border-b-2 border-blue-200 pb-4">
                             <h2 className="text-2xl font-bold uppercase text-gray-800">Editorial Board Members</h2>
                             <Link
                                 to="/joinus-editorial"

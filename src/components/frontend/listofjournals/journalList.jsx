@@ -842,14 +842,14 @@ function Listofjournals() {
                 const disciplinesResponse = await axios.get(`${BASE_URL}/disciplines`, {
                     headers: {},
                 });
-                console.log('Disciplines API Response:', disciplinesResponse.data);
+                // console.log('Disciplines API Response:', disciplinesResponse.data);
                 if (disciplinesResponse.data.success) {
                     const disciplinesData = disciplinesResponse.data.data || [];
                     setDisciplines(disciplinesData);
-                    console.log('Discipline Data:', disciplinesData.map(d => ({
-                        id: d.id || d.disciplineId,
-                        name: d.disciplineName || d.name
-                    })));
+                    // console.log('Discipline Data:', disciplinesData.map(d => ({
+                    //     id: d.id || d.disciplineId,
+                    //     name: d.disciplineName || d.name
+                    // })));
                 } else {
                     setError('Failed to fetch disciplines: Invalid response format');
                 }
@@ -857,16 +857,16 @@ function Listofjournals() {
                 const journalsResponse = await axios.get(`${BASE_URL}/journals`, {
                     headers: {},
                 });
-                console.log('Journals API Response:', journalsResponse.data);
+                // console.log('Journals API Response:', journalsResponse.data);
                 if (journalsResponse.data.success) {
                     const journalsData = journalsResponse.data.data || [];
                     setJournals(journalsData);
-                    console.log('Journal Data:', journalsData.map(j => ({
-                        id: j.journalId,
-                        name: j.journalName,
-                        abbrevation: j.abbrevation || 'N/A',
-                        disciplineId: j.disciplineId || j.discipline_id
-                    })));
+                    // console.log('Journal Data:', journalsData.map(j => ({
+                    //     id: j.journalId,
+                    //     name: j.journalName,
+                    //     abbrevation: j.abbrevation || 'N/A',
+                    //     disciplineId: j.disciplineId || j.discipline_id
+                    // })));
                 } else {
                     setError((prev) => (prev ? `${prev}; Failed to fetch journals` : 'Failed to fetch journals'));
                 }
@@ -881,8 +881,8 @@ function Listofjournals() {
     }, []);
 
     useEffect(() => {
-        console.log('Selected Discipline ID:', selectedDisciplineId);
-        console.log('Filtered Journals:', filteredJournals);
+        // console.log('Selected Discipline ID:', selectedDisciplineId);
+        // console.log('Filtered Journals:', filteredJournals);
     }, [selectedDisciplineId]);
 
     const sortedDisciplines = [...disciplines].sort((a, b) =>
@@ -899,7 +899,7 @@ function Listofjournals() {
             return;
         }
         setSelectedDisciplineId(id === selectedDisciplineId ? null : id);
-        console.log('Selected Discipline ID:', id);
+        // console.log('Selected Discipline ID:', id);
     };
 
     const filteredJournals = selectedDisciplineId
@@ -923,7 +923,7 @@ function Listofjournals() {
     const disciplineName = disciplines.find(
         (dis) => (dis.id || dis.disciplineId) === selectedDisciplineId
     )?.disciplineName || 'All Journals';
-    console.log('Selected Discipline Name:', disciplineName);
+    // console.log('Selected Discipline Name:', disciplineName);
 
     // Helper function to get a valid abbrevation
     const getJournalAbbrevation = (journal) => {

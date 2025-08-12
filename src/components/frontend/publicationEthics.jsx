@@ -135,7 +135,7 @@ function PublicationEthics() {
                             IASSRD actively promotes education and awareness of ethical research and publication practices among scholars and practitioners.
                         </p>
                         <h2 className="text-2xl text-gray-800 font-semibold mt-4">Misconduct Policy</h2>
-                        <p className="text-[17px] text-gray-800 pt-3">
+                        <p className="text-[17px] text-gray-800 pt-3 text-justify">
                             IASSRD has a zero-tolerance policy for unethical practices. Allegations of misconduct—such as plagiarism, data manipulation, improper authorship, or nondisclosure of conflicts of interest—will be investigated thoroughly. Confirmed cases may result in retraction of the article, notification of affiliated institutions, and sanctions against the authors or reviewers involved.
                         </p>
                         <p className="text-[17px] text-gray-800 pt-3">

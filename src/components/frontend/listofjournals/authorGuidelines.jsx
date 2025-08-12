@@ -164,12 +164,12 @@ const AuthorGuidelines = () => {
                     throw new Error(`Journal HTTP error! Status: ${journalResponse.status}`);
                 }
                 const journalData = await journalResponse.json();
-                console.log("Fetched journal:", journalData);
+                // console.log("Fetched journal:", journalData);
 
                 const matchedJournal = journalData.data.find(
                     (j) => j.abbrevation === journalAbbrevation
                 );
-                console.log("Matched journal:", matchedJournal);
+                // console.log("Matched journal:", matchedJournal);
 
                 if (!matchedJournal) {
                     throw new Error("No journal found for the provided abbreviation");
@@ -269,9 +269,9 @@ const AuthorGuidelines = () => {
 
                     <main className={`w-full md:w-3/4 px-4 transition-all duration-300 ${isMobile && isMobileMenuOpen ? "ml-0" : "ml-14"}`}>
                         <section className="mb-7 font-IBM">
-                            <p className="text-3xl text-blue-800 font-bold mb-5">{journal?.journalName}</p>
-                            <p className="border-b border-gray-300 mb-8"></p>
-                            <p className="text-3xl text-gray-800 font-bold mb-2 ">Author Guidelines</p>
+                            <p className="text-3xl text-blue-800 font-bold mb-3">{journal?.journalName}</p>
+                            <p className="border-b border-gray-300 mb-4"></p>
+                            <p className="text-3xl text-gray-800 font-bold mb-1 ">Author Guidelines</p>
                             {/* <h2 className="text-xl font-bold text-gray-800 mb-3 font-IBM">
                                 Author Guidelines - IASSRD Journals
                             </h2> */}

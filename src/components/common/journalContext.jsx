@@ -16,7 +16,7 @@ export const JournalProvider = ({ children }) => {
             try {
                 setLoading(true);
                 const response = await axios.get(`${BASE_URL}/journals`);
-                console.log('API Response:', response.data); // Debug log to inspect response
+                // console.log('API Response:', response.data); // Debug log to inspect response
                 if (!response.data.success || !Array.isArray(response.data.data)) {
                     throw new Error("Invalid journals response format");
                 }
@@ -32,7 +32,7 @@ export const JournalProvider = ({ children }) => {
         fetchJournals();
     }, []);
 
-    console.log('journals in context:', journals); // Debug log to verify journals
+    // console.log('journals in context:', journals); // Debug log to verify journals
 
     return (
         <JournalContext.Provider value={{ journals, loading, error }}>

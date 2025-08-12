@@ -573,7 +573,7 @@ const ContactUs = () => {
         const fetchContacts = async () => {
             try {
                 const response = await axios.get(`${BASE_URL}/contactus`);
-                console.log("API Response:", response.data); // Debug log
+                // console.log("API Response:", response.data); // Debug log
                 let data = [];
                 if (Array.isArray(response.data)) {
                     data = response.data;
@@ -633,7 +633,7 @@ const ContactUs = () => {
             const role = JSON.parse(user);
             roletype = role?.role || null; // Fallback to null if role is undefined
         }
-        console.log(roletype);
+        // console.log(roletype);
     } catch (error) {
         console.error("Error parsing user from localStorage:", error);
     }

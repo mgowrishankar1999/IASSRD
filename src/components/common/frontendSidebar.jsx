@@ -278,10 +278,10 @@ const Sidebar = ({ journalAbbrevation: propJournalAbbrevation, dynamicProps }) =
     const { journalAbbrevation: paramJournalAbbrevation } = useParams();
     const journalAbbrevation = propJournalAbbrevation || paramJournalAbbrevation;
 
-    console.log('Prop journalAbbrevation:', propJournalAbbrevation);
-    console.log('Param journalAbbrevation:', paramJournalAbbrevation);
-    console.log('Selected journalAbbrevation:', journalAbbrevation);
-    console.log('dynamicProps:', dynamicProps);
+    // console.log('Prop journalAbbrevation:', propJournalAbbrevation);
+    // console.log('Param journalAbbrevation:', paramJournalAbbrevation);
+    // console.log('Selected journalAbbrevation:', journalAbbrevation);
+    // console.log('dynamicProps:', dynamicProps);
 
     const [isDropdownopen, setIsDropdownopen] = useState(true);
 
